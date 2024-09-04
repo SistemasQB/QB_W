@@ -6,32 +6,23 @@
     <title>Directorio</title>
     <!-- Enlace a Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 56px; /* Espacio para la navbar */
-        }
-        .carousel-item img {
-            width: 100%;
-            height: 400px; /* Ajusta la altura del carrusel a tu gusto */
-            object-fit: cover;
-        }
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
-    </style>
+    <!-- Enlace a tu archivo CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">Quality Bolca</a>
+        <a  class="navbar-brand" href="#">Quality Bolca</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(actual)</span></a>
+                    <a class="nav-link" href="#">Directorio <span class="sr-only">(actual)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Sobre Nosotros</a>
@@ -44,10 +35,11 @@
                 </li>
             </ul>
             <!-- Formulario de búsqueda -->
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <form class="form-inline my-2 my-lg-0" id="search-form">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
+            
         </div>
     </nav>
 
@@ -61,21 +53,15 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="media/logo.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    
-                </div>
+                <div class="carousel-caption d-none d-md-block"></div>
             </div>
             <div class="carousel-item">
                 <img src="media/logo-grupo--negative.webp" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                   
-                </div>
+                <div class="carousel-caption d-none d-md-block"></div>
             </div>
             <div class="carousel-item">
                 <img src="media/57e1c28912a8a.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    
-                </div>
+                <div class="carousel-caption d-none d-md-block"></div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -90,38 +76,9 @@
 
     <!-- Información de Empleados -->
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Nuestro Equipo</h2>
-        <div class="row">
-            <!-- Tarjeta 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/350x200?text=Empleado+1" class="card-img-top" alt="Empleado 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Nombre del Empleado 1</h5>
-                        <p class="card-text">Descripción breve del empleado 1. Su rol en la empresa y habilidades.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Tarjeta 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/350x200?text=Empleado+2" class="card-img-top" alt="Empleado 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Nombre del Empleado 2</h5>
-                        <p class="card-text">Descripción breve del empleado 2. Su rol en la empresa y habilidades.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Tarjeta 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/350x200?text=Empleado+3" class="card-img-top" alt="Empleado 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Nombre del Empleado 3</h5>
-                        <p class="card-text">Descripción breve del empleado 3. Su rol en la empresa y habilidades.</p>
-                    </div>
-                </div>
-            </div>
+        <h2 class="text-center mb-4">NUESTRO EQUIPO </h2>
+        <div class="row" id="employee-cards">
+            <!-- Las tarjetas se agregarán aquí dinámicamente -->
         </div>
     </div>
 
@@ -129,5 +86,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Enlace a tu archivo JavaScript -->
+    <script src="scripts.js"></script>
 </body>
 </html>
