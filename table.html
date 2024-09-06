@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento</title>
+    <!-- Enlace al CSS de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; 
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .table-container {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        h2 {
+            color: #007bff; 
+        }
+        .table thead {
+            background-color: #0056b3; 
+            color: white; 
+        }
+        .table tbody tr:nth-child(odd) {
+            background-color: #e9ecef; 
+        }
+        .table tbody tr:nth-child(even) {
+            background-color: #ffffff; 
+        }
+        .table-bordered th, .table-bordered td {
+            border: 1px solid #dee2e6; 
+        }
+        .footer-button {
+            margin-top: 20px; 
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="table-container">
+            <h2 class="text-center">MANTENIMIENTOS</h2>
+            <br>
+            
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>FECHA NACIMIENTO</th>
+                        <th>REALIZADO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ana</td>
+                        <td>30</td>
+                        <td>Madrid</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Juan</td>
+                        <td>25</td>
+                        <td>Barcelona</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>María</td>
+                        <td>28</td>
+                        <td>Valencia</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Botón Enviar -->
+            <div class="footer-button">
+                <button type="button" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Enlace a los scripts de Bootstrap y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
