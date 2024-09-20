@@ -3,30 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicitud de Empleo</title>
+    <title>FORMATO DE SOLICITUD DE EMPLEO</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-check-inline {
+            display: flex;
+            align-items: center;
+            margin-right: 1rem; /* Espacio entre las opciones */
+        }
+        .form-check-inline input[type="text"] {
+            margin-left: 0.5rem; /* Espacio entre el radio button y el campo de texto */
+            max-width: 200px; /* Ancho máximo para el campo de texto */
+        }
+        .form-check-horizontal {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .form-check-horizontal .form-check {
+            margin-right: 1rem;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
         <!-- Encabezado con logotipo, información y datos adicionales -->
         <div class="row mb-4 bordered-box">
             <!-- Logotipo -->
-            <div class="col-md-3 d-flex align-items-center ">
+            <div class="col-md-3 d-flex align-items-center">
                 <img src="media/qb.jpg" alt="Logotipo de la Empresa" class="img-fluid">
             </div>
             <!-- Información de la Empresa -->
-            <div class="col-md-6 text-center ">
+            <div class="col-md-6 text-center">
                 <p style="text-align: left;">Solicitud de Empleo</p>
                 <br>
                 <p style="text-align: left;">Quality Bolca S.A. de C.V.</p>
                 <p style="text-align: left;">Completa el siguiente formulario</p>
                 <br>
-                <p style="text-align: left;">Nota: La información aquí proporcionada será tratada de manera confidencial
-                  de acuerdo con nuestro aviso de privacidad, el cual puede solicitar en el depto. de R.H.
-                </p>
+                <p style="text-align: left;">Nota: La información aquí proporcionada será tratada de manera confidencial de acuerdo con nuestro aviso de privacidad, el cual puede solicitar en el depto. de R.H.</p>
             </div>
             <!-- Información Adicional -->
             <div class="col-md-3">
@@ -59,7 +75,7 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
+                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
                         </div>
                         <div class="form-group">
                             <label for="telefono">Número de Teléfono</label>
@@ -69,6 +85,42 @@
                             <label for="direccion">Dirección</label>
                             <input type="text" class="form-control" id="direccion" placeholder="Ingresa tu dirección completa" required>
                         </div>
+                        
+                        <!-- Nuevos campos: ¿Vive con? y Estatura/Peso -->
+                        <div class="form-group">
+                            <label>¿Vive con?</label>
+                            <div class="form-check-horizontal">
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="viveConFamilia" name="viveCon" value="familia" required>
+                                    <label class="form-check-label" for="viveConFamilia">Familia</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="viveConAmigos" name="viveCon" value="amigos" required>
+                                    <label class="form-check-label" for="viveConAmigos">Amigos</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="viveConOtro" name="viveCon" value="otro" required>
+                                    <label class="form-check-label" for="viveConOtro">Parientes:</label>
+                                    <input type="text" class="form-control form-control-sm ml-2" id="viveConOtroText" placeholder="Especificar">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="viveSolo" name="viveCon" value="solo" required>
+                                    <label class="form-check-label" for="viveSolo">Solo</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="estatura">Estatura (cm)</label>
+                                <input type="number" class="form-control" id="estatura" placeholder="Ingresa tu estatura en cm" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="peso">Peso (kg)</label>
+                                <input type="number" class="form-control" id="peso" placeholder="Ingresa tu peso en kg" required>
+                            </div>
+                        </div>
+                        
                         <div class="form-group">
                             <label for="experiencia">Experiencia Laboral</label>
                             <textarea class="form-control" id="experiencia" rows="4" placeholder="Describe tu experiencia laboral" required></textarea>
@@ -84,7 +136,6 @@
                                 <label class="form-check-label" for="adeudoNo">No</label>
                             </div>
                         </div>
-
 
                         <div class="form-group">
                             <label for="cv">Adjuntar CV</label>
@@ -141,6 +192,28 @@
                     toggleIcon.innerHTML = '&#9650;'; // Flecha hacia arriba
                 } else {
                     toggleIcon.innerHTML = '&#9660;'; // Flecha hacia abajo
+                }
+            });
+
+            // Mostrar/ocultar el campo de nacionalidad "Otro"
+            const nacionalidadOtroRadio = document.getElementById('nacionalidadOtro');
+            const nacionalidadOtroText = document.getElementById('nacionalidadOtroText');
+            nacionalidadOtroRadio.addEventListener('change', function () {
+                if (nacionalidadOtroRadio.checked) {
+                    nacionalidadOtroText.classList.remove('form-control-hidden');
+                } else {
+                    nacionalidadOtroText.classList.add('form-control-hidden');
+                }
+            });
+
+            // Mostrar/ocultar el campo de "Vive con" "Otro"
+            const viveConOtroRadio = document.getElementById('viveConOtro');
+            const viveConOtroText = document.getElementById('viveConOtroText');
+            viveConOtroRadio.addEventListener('change', function () {
+                if (viveConOtroRadio.checked) {
+                    viveConOtroText.classList.remove('form-control-hidden');
+                } else {
+                    viveConOtroText.classList.add('form-control-hidden');
                 }
             });
         });

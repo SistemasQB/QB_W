@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMATO DE SOLICITUD DE EMPLEO</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Encabezado con logotipo, información y datos adicionales -->
+        <div class="row mb-4 bordered-box">
+            <!-- Logotipo -->
+            <div class="col-md-3 d-flex align-items-center">
+                <img src="media/qb.jpg" alt="Logotipo de la Empresa" class="img-fluid">
+            </div>
+            <!-- Información de la Empresa -->
+            <div class="col-md-6 text-center">
+                <p style="text-align: left;">Solicitud de Empleo</p>
+                <br>
+                <p style="text-align: left;">Quality Bolca S.A. de C.V.</p>
+                <p style="text-align: left;">Completa el siguiente formulario</p>
+                <br>
+                <p style="text-align: left;">Nota: La información aquí proporcionada será tratada de manera confidencial de acuerdo con nuestro aviso de privacidad, el cual puede solicitar en el depto. de R.H.</p>
+            </div>
+            <!-- Información Adicional -->
+            <div class="col-md-3">
+                
+                <div class="form-group">
+                    <label for="puesto">Puesto Solicitado</label>
+                    <input type="text" class="form-control" id="puesto" placeholder="Ingresa el puesto solicitado" required>
+                </div>
+                <div class="form-group">
+                    <label for="sueldo">Sueldo Mensual Esperado</label>
+                    <input type="text" class="form-control" id="sueldo" placeholder="Ingresa el sueldo esperado" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Datos Personales -->
+        <div class="mb-3">
+            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#datosPersonales" aria-expanded="true" aria-controls="datosPersonales">
+                <span id="toggle-icon" class="mr-2">&#9650;</span>1. Datos Personales
+            </button>
+            <div class="collapse show mt-3" id="datosPersonales">
+                <div class="bordered-box p-4">
+                    <form id="solicitudForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="nombre">Nombre(s)</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="apellidoPaterno">Apellido Paterno</label>
+                                <input type="text" class="form-control" id="apellidoPaterno" placeholder="Ingresa tu apellido paterno" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="apellidoMaterno">Apellido Materno</label>
+                                <input type="text" class="form-control" id="apellidoMaterno" placeholder="Ingresa tu apellido materno" required>
+                            </div>
+                            
+                            <div class="form-group col-md-2">
+                                <label for="edad">Edad</label>
+                                <input type="number" class="form-control form-control-small" id="edad" placeholder="Edad" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                                <input type="date" class="form-control" id="fechaNacimiento" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lugarNacimiento">Lugar de Nacimiento</label>
+                                <input type="text" class="form-control" id="lugarNacimiento" placeholder="Ingresa tu lugar de nacimiento" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="tiempoResidencia">Tiempo de Residencia en esta ciudad</label>
+                                <input type="text" class="form-control" id="tiempoResidencia" placeholder="Tiempo de residencia" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="direccion">Dirección (Calle, colonia y Número)</label>
+                                <input type="text" class="form-control" id="direccion" placeholder="Calle y Número" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="cp">Código Postal</label>
+                                <input type="text" class="form-control form-control-small" id="cp" placeholder="CP" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="nacionalidad">Nacionalidad</label>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="nacionalidadMexicano" name="nacionalidad" value="mexicano" required>
+                                    <label class="form-check-label" for="nacionalidadMexicano">Mexicano</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="nacionalidadOtro" name="nacionalidad" value="otro" required>
+                                    <label class="form-check-label" for="nacionalidadOtro">Otro:</label>
+                                    <input type="text" class="form-control form-control-small ml-2 form-control-hidden" id="nacionalidadOtroText" placeholder="Especificar">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row d-flex align-items-center">
+                            <div class="form-group col-md-3">
+                                <label for="viveCon">Vive con:</label>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="viveConFamilia" name="viveCon" value="familia" required>
+                                    <label class="form-check-label" for="viveConFamilia">Padres</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="viveConPareja" name="viveCon" value="pareja" required>
+                                    <label class="form-check-label" for="viveConPareja">Pareja</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="viveConOtro" name="viveCon" value="otro" required>
+                                    <label class="form-check-label" for="viveConOtro">Otro:</label>
+                                    <input type="text" class="form-control form-control-small ml-2 form-control-hidden" id="viveConOtroText" placeholder="Especificar">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="viveSolo" name="viveCon" value="solo" required>
+                                    <label class="form-check-label" for="viveSolo">Solo</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label for="sexo">Sexo</label>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="sexoMasculino" name="sexo" value="masculino" required>
+                                    <label class="form-check-label" for="sexoMasculino">Masculino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="sexoFemenino" name="sexo" value="femenino" required>
+                                    <label class="form-check-label" for="sexoFemenino">Femenino</label>
+                                </div>
+                            </div>
+
+                            <!-- Nuevo campo para el estado civil -->
+                            <div class="form-group col-md-3">
+                                <label for="estadoCivil">Estado Civil</label>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="estadoCivilSoltero" name="estadoCivil" value="soltero" required>
+                                    <label class="form-check-label" for="estadoCivilSoltero">Soltero</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="estadoCivilCasado" name="estadoCivil" value="casado" required>
+                                    <label class="form-check-label" for="estadoCivilCasado">Casado</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="estadoCivilDivorciado" name="estadoCivil" value="divorciado" required>
+                                    <label class="form-check-label" for="estadoCivilDivorciado">Divorciado</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="estadoCivilViudo" name="estadoCivil" value="viudo" required>
+                                    <label class="form-check-label" for="estadoCivilViudo">Viudo</label>
+                                </div>
+                            </div>
+
+                            <!-- Nuevo campo para el número de dependientes -->
+                            <div class="form-group col-md-3">
+                                <label for="dependientes">Dependientes</label>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="dependiente1" name="dependientes" value="dependiente1">
+                                    <label class="form-check-label" for="dependiente1">Hijos</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="dependiente2" name="dependientes" value="dependiente2">
+                                    <label class="form-check-label" for="dependiente2">Cónyuge</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="dependiente3" name="dependientes" value="dependiente3">
+                                    <label class="form-check-label" for="dependiente3">Padres</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="telefono">Telefono</label>
+                                <input  class="form-control" id="telefono" placeholder="Digita tu numero telefonico" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="correo">Correo Electronico</label>
+                                <input type="number" class="form-control" id="email" placeholder="algonuevo@algo.com" required>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="estatura">Estatura (cm)</label>
+                                <input type="number" class="form-control" id="estatura" placeholder="Ingresa tu estatura en cm" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="peso">Peso (kg)</label>
+                                <input type="number" class="form-control" id="peso" placeholder="Ingresa tu peso en kg" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="dep">En caso de enfermar alguno de sus dependientes ¿Quien lo cuidaria?</label>
+                                <textarea class="form-control" id="dep" rows="2" placeholder="Especifique" required></textarea>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="leg">¿Actualmente se encuentra en un proceso legal?</label>
+                                <textarea class="form-control" id="leg" rows="2" placeholder="Si/No y especifique" required></textarea>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <label for="experiencia">Experiencia Laboral</label>
+                            <textarea class="form-control" id="experiencia" rows="4" placeholder="Describe tu experiencia laboral" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Actualmente tiene adeudos con Banorte:</label>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="adeudoSi" name="adeudo" value="si" required>
+                                <label class="form-check-label" for="adeudoSi">Sí</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="adeudoNo" name="adeudo" value="no" required>
+                                <label class="form-check-label" for="adeudoNo">No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cv">Adjuntar CV</label>
+                            <input type="file" class="form-control-file" id="cv">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+<!-- DATOS DE CONTACTO -->
+<div class="mb-3">
+    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#datoscontacto" aria-expanded="false" aria-controls="datoscontacto">
+        <span id="toggle-icon-experiencia" class="mr-2">&#9650;</span>2. Datos de contacto
+    </button>
+    <div class="collapse mt-3" id="datoscontacto">
+        <div class="bordered-box p-4">
+            <div class="form-row">
+                <p>Telefonos en caso de emergencia (Coloque al menos 2 telefonos de 
+                    emergencia de personas con contacto directo con usted).
+                </p>
+                <div class="form-group col-md-3">
+                    <label for="nombre">Nombre de quien responde:</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingresa el nombre" required>
+                    <input type="text" class="form-control" id="nombre2" placeholder="Ingresa el nombre" required>
+                    <input type="text" class="form-control" id="nombre3" placeholder="Ingresa el nombre" >
+                    <br>
+                    <label for="face">Facebook:</label>
+                    <input type="text" class="form-control" id="face" placeholder="Usuario de Facebook" >
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="pare">Parentesco</label>
+                    <input type="text" class="form-control" id="Pare1" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="Pare2" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="Pare3" placeholder="Especifique" >
+                    <br>
+                    <label for="link">Linkedln:</label>
+                    <input type="text" class="form-control" id="link" placeholder="Usuario de Linkedln" >
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" class="form-control" id="tel1" placeholder="Ingresa el numero telefonico" required>
+                    <input type="text" class="form-control" id="tel2" placeholder="Ingresa el numero telefonico" required>
+                    <input type="text" class="form-control" id="tel3" placeholder="Ingresa el numero telefonico" required>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- DOCUMENTACION -->
+<div class="mb-3">
+    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#documentos" aria-expanded="false" aria-controls="informacionAdicional">
+        <span id="toggle-icon-info" class="mr-2">&#9650;</span>3. Documentacion    
+    </button>
+    <div class="collapse mt-3" id="documentos">
+        <div class="bordered-box p-4">
+             <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="curp">CURP</label>
+                                <input  class="form-control" id="curp" placeholder="Clave Unica del Registro de Poblacion" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="rfc">RFC</label>
+                                <input  class="form-control" id="rfc" placeholder="Registro Federal de Contribuyentes" required>
+                            </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nss">Numero de Seguro Social</label>
+                    <input class="form-control " id="nss" placeholder="NSS" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="servmil">Completo Servicio Militar</label>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="nacionalidadMexicano" name="nacionalidad" value="mexicano" required>
+                        <label class="form-check-label" for="servs">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="nacionalidadOtro" name="nacionalidad" value="otro" required>
+                        <label class="form-check-label" for="servn">No</label>
+                        <input type="text" class="form-control form-control-small ml-2 form-control-hidden" id="nacionalidadOtroText" placeholder="Especificar">
+                    </div>
+                </div>
+            </div>
+
+
+        <div class="form-row">
+                
+                <div class="form-group col-md-2">
+                    <label for="ci">Tiene credito infonavit</label>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="credinfs" name="sic" value="Si" required>
+                        <label class="form-check-label" for="servs">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="credinfn" name="nacionalidad" value="no" required>
+                        <label class="form-check-label" for="servn">No</label>
+                        <input type="text" class="form-control form-control-small ml-2 form-control-hidden" id="nacionalidadOtroText" placeholder="Especificar">
+                    </div>
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="nci">Numero de Credito</label>
+                    <input class="form-control  " id="nci" placeholder="No. Credito" >
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="desc">Descuento Mensual: $</label>
+                    <input class="form-control  " id="desc" placeholder="Cantidad" >
+                </div>
+        </div>
+        <div class="form-row">
+                
+            <div class="form-group col-md-2">
+                <label for="ci">Tiene credito fonacot</label>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="credinfs" name="sic" value="Si" required>
+                    <label class="form-check-label" for="servs">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="credinfn" name="nacionalidad" value="no" required>
+                    <label class="form-check-label" for="servn">No</label>
+                    <input type="text" class="form-control form-control-small ml-2 form-control-hidden" id="nacionalidadOtroText" placeholder="Especificar">
+                </div>
+            </div>
+            <div class="form-group col-md-5">
+                <label for="nci">Numero de Credito</label>
+                <input class="form-control  " id="nci" placeholder="No. Credito" >
+            </div>
+            <div class="form-group col-md-5">
+                <label for="desc">Descuento Mensual: $</label>
+                <input class="form-control  " id="desc" placeholder="Cantidad" >
+            </div>
+       </div>
+           
+        </div>
+    </div>
+   </div>
+
+
+
+   <!-- ESTADO DE SALUD -->
+<div class="mb-3">
+    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#salud" aria-expanded="false" aria-controls="estadoSalud">
+        <span id="toggle-icon-info" class="mr-2">&#9650;</span>4. Estado de salud y habitos personales   
+    </button>
+    <div class="collapse mt-3" id="salud">
+        <div class="bordered-box p-4">
+           
+            
+        <div class="form-row">
+                
+                <div class="form-group col-md-5">
+                    <label for="es">Actualmente ¿Como considera su estado de salud?</label>
+                    <div class="d-flex">
+                        <div class="form-check me-4">
+                            <input type="radio" class="form-check-input" id="esb" name="edb" value="bueno" required>
+                            <label class="form-check-label" for="esb">Bueno </label>
+                        </div>
+                        <div class="form-check me-4">
+                            <input type="radio" class="form-check-input" id="esr" name="edr" value="regular">
+                            <label class="form-check-label" for="esr">Regular </label>
+                        </div>
+                        <div class="form-check me-4">
+                            <input type="radio" class="form-check-input" id="esm" name="edm" value="malo">
+                            <label class="form-check-label" for="esm">Malo </label>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="form-group col-md-5">
+                    <label for="ec">¿Padece alguna enfermedad cronica o embarazo?</label>
+                    <div class="d-flex">
+                        <div class="form-check me-4">
+                            <input type="radio" class="form-check-input" id="ecn" name="edn" value="no" required>
+                            <label class="form-check-label" for="ecn">No </label>
+                        </div>
+                        <div class="form-check me-5">
+                            <input type="radio" class="form-check-input" id="ecs" name="eds" value="si">
+                            <label class="form-check-label" for="ecs">Si </label>
+                        </div>
+                        <div class="form-check me-5">
+                            <label class="form-check-label me-3" for="esc">¿Cuál?</label> <!-- Aumenté el margen a me-3 -->
+                            <input class="form-control" id="esc" placeholder="Especifica">
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+             </div>
+
+
+             <p>Con que frecuencia consume las siguientes sustancias</p>
+             <div class="form-row">
+                
+                <div class="form-group col-md-3">
+                    <label for="nombre">Tabaco</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Frecuencia" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="apellidoPaterno">Alcohol</label>
+                    <input type="text" class="form-control" id="apellidoPaterno" placeholder="Frecuencia" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="apellidoMaterno">Drogas / Alucinogenos</label>
+                    <input type="text" class="form-control" id="apellidoMaterno" placeholder="Frecuencia" required>
+                </div>
+                
+                
+            </div>
+          
+
+        <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="ec">Padece de alguna alergia</label>
+                    <div class="d-flex">
+                        <div class="form-check me-4">
+                            <input type="radio" class="form-check-input" id="ecn" name="edn" value="no" required>
+                            <label class="form-check-label" for="ecn">No </label>
+                        </div>
+                        <div class="form-check me-5">
+                            <input type="radio" class="form-check-input" id="ecs" name="eds" value="si">
+                            <label class="form-check-label" for="ecs">Si </label>
+                        </div>
+                        <div class="form-check me-5">
+                            <label class="form-check-label me-3" for="esc">¿Cuál?</label> <!-- Aumenté el margen a me-3 -->
+                            <input class="form-control" id="esc" placeholder="Especifica">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+       <div class="form-row">
+        <div class="form-group col-md-5">
+            <label for="ec">¿Lo han operado alguna vez?</label>
+            <div class="d-flex">
+                <div class="form-check me-4">
+                    <input type="radio" class="form-check-input" id="ecn" name="edn" value="no" required>
+                    <label class="form-check-label" for="ecn">No </label>
+                </div>
+                <div class="form-check me-5">
+                    <input type="radio" class="form-check-input" id="ecs" name="eds" value="si">
+                    <label class="form-check-label" for="ecs">Si </label>
+                </div>
+                <div class="form-check me-5">
+                    <label class="form-check-label me-3" for="esc">¿De que ?</label> <!-- Aumenté el margen a me-3 -->
+                    <input class="form-control" id="esc" placeholder="Especifica">
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="form-row">
+        <label for="face">¿Cual es tu deporte o pasatiempo favorito?</label>
+        <input type="text" class="form-control" id="face" placeholder="Especifica" >
+        <label for="face">¿Cual es tu meta en la vida?</label>
+        <input type="text" class="form-control" id="face" placeholder="Especifica" >
+    </div>
+   </div>
+ </div>
+</div>
+
+
+
+
+ <!-- DATOS FAMLIARES -->
+ <div class="mb-3">
+    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#datos" aria-expanded="false" aria-controls="datosFamil">
+        <span id="toggle-icon-info" class="mr-2">&#9650;</span>5. Datos Familiares   
+    </button>
+    <div class="collapse mt-3" id="datos">
+        <div class="bordered-box p-4">
+            <div class="form-row">
+               
+                <div class="form-group col-md-2">
+                    <label for="nombre">Parentesco</label>
+                    
+                    <div class="input-group">
+                        <span style="width: 100%;" class="input-group-text">Padre</span>
+                        
+                    </div>
+                    
+                    <div class="input-group">
+                        <span style="width: 100%; " class="input-group-text">Madre</span>
+                       
+                    </div>
+                    
+                    <div class="input-group">
+                        <span style="width: 100%; " class="input-group-text">Esposa(o)</span>
+                        
+                    </div>
+                    
+                    <div class="input-group">
+                        <span style="width: 100%; " class="input-group-text">Hijo (a)</span>
+                        
+                    </div>
+                    
+                    <div class="input-group">
+                        <span style="width: 100%; " class="input-group-text">Hijo (a)</span>
+                        
+                    </div>
+                    
+                    <div class="input-group">
+                        <span style="width: 100%; " class="input-group-text">Hijo (a)</span>
+                       
+                    </div>
+                    
+                    <div class="input-group">
+                        <span style="width: 100%; "class="input-group-text">Hijo (a)</span>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="form-group col-md-2">
+                    <label >Nombre</label>
+                    <input type="text" class="form-control" id="nom1" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="nom2" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="nom3" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="nom4" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="nom5" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="nom6" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="nom7" placeholder="Especifique" >
+                    <br>
+                    
+                </div>
+                <div class="form-group col-md-2">
+                    <label >Vive</label>
+                    <input type="text" class="form-control" id="v1" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="v2" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="v3" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="v4" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="v5" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="v6" placeholder="Especifique">
+                    <input type="text" class="form-control" id="v7" placeholder="Especifique" >
+                </div>
+                <div class="form-group col-md-2">
+                    <label >Edad</label>
+                    <input type="text" class="form-control" id="e1" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="e2" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="e3" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="e4" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="e5" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="e6" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="e7" placeholder="Especifique" >
+                </div>
+                
+                <div class="form-group col-md-2">
+                    <label >Direccion</label>
+                    <input type="text" class="form-control" id="dir1" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="dir2" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="dir3" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="dir4" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="dir5" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="dir6" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="dir7" placeholder="Especifique" >
+                </div>
+                <div class="form-group col-md-2">
+                    <label >Ocupacion</label>
+                    <input type="text" class="form-control" id="oc1" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="oc2" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="oc3" placeholder="Especifique" required>
+                    <input type="text" class="form-control" id="oc4" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="oc5" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="oc6" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="oc7" placeholder="Especifique" >
+                </div>
+                
+                
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="encarg">Mientras usted trabaja, quien se encarga del cuidado
+                    de sus hijos y/o dependientes economicos:
+                </label>
+                <input class="form-control " id="encg" placeholder="Especifique" required>
+                
+            </div>
+            <div class="form-group col-md-6">
+                <label for="encarg">De la persona antes mencionada ,
+
+                    ¿cual es su estado de salud actualmente ?:
+                </label>
+                <input class="form-control " id="encg" placeholder="Especifique" required>
+                
+            </div>
+        </div>
+        
+        
+       <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="edad">Edad</label>
+            <input type="number" class="form-control form-control-small" id="edad" placeholder="Edad" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="labora">¿Labora?
+            </label>
+            <input class="form-control " id="encg" placeholder="Especifique" required>     
+        </div>
+        <div class="form-group col-md-4">
+            <label for="turn">¿En que turno?
+            </label>
+            <input class="form-control " id="encg" placeholder="Especifique" required>     
+        </div>
+        
+       </div>
+       <div class="form-row">
+        <div class="form-group col-md-">
+            <label for="encargh">En caso de que la persona antes mencionada no pueda cuidar
+                a sus hijos ,¿Quien mas se los podria cuidar ?:
+            </label>
+            <input class="form-control " id="encg" placeholder="Especifique" required>
+            
+        </div>
+       </div>
+   </div>
+ </div>
+
+
+ 
+</div>
+
+
+
+
+<!-- ESCOLARIDAD -->
+<div class="mb-3">
+    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#escolaridad" aria-expanded="false" aria-controls="Escolarid">
+        <span id="toggle-icon-experiencia" class="mr-2">&#9650;</span>6. Escolaridad
+    </button>
+    <div class="collapse mt-3" id="escolaridad">
+        <div class="bordered-box p-4">
+            <div class="form-row">
+                
+                
+                <div class="form-group col-md-2">
+                    <label for="nombre">GRADO:</label>
+                    <div class="input-group">
+                        <span style="width: 100%;" class="input-group-text">Primaria</span>
+                        
+                    </div>
+                    <div class="input-group">
+                        <span style="width: 100%;" class="input-group-text">Secundaria </span>
+                        
+                    </div>
+                    <div class="input-group">
+                        <span style="width: 100%;" class="input-group-text">Preparatoria </span>
+                        
+                    </div>
+                    <div class="input-group">
+                        <span style="width: 100%;" class="input-group-text">Profesional</span>
+                        
+                    </div>
+                    <div class="input-group">
+                        <span style="width: 100%;" class="input-group-text">Comercial u otras</span>
+                        
+                    </div>
+                    
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="nomesc">NOMBRE DE LA ESCUELA</label>
+                    <input type="text" class="form-control" id="nom1" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="nom2" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="nom3" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="nom4" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="nom5" placeholder="Especifique" >
+                </div>   
+                <div class="form-group col-md-2">
+                    <label for="ubicacion">UBICACION</label>
+                    <input type="text" class="form-control" id="ubi1" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="ubi2" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="ubi3" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="ubi4" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="ubi5" placeholder="Especifique" >
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="fecha">FECHAS</label>
+                    <input type="text" class="form-control" id="fecha1" placeholder="año a año" >
+                    <input type="text" class="form-control" id="fecha2" placeholder="año a año" >
+                    <input type="text" class="form-control" id="fecha3" placeholder="año a año" >
+                    <input type="text" class="form-control" id="fecha4" placeholder="año a año" >
+                    <input type="text" class="form-control" id="fecha5" placeholder="año a año" >
+                </div>
+                <div class="form-group col-md-1">
+                    <label for="anios">AÑOS</label>
+                    <input type="text" class="form-control" id="a1" placeholder="años" >
+                    <input type="text" class="form-control" id="a2" placeholder="años" >
+                    <input type="text" class="form-control" id="a3" placeholder="años" >
+                    <input type="text" class="form-control" id="a4" placeholder="años" >
+                    <input type="text" class="form-control" id="a5" placeholder="años" >
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="titulo">TITULO RECIBIDO</label>
+                    <input type="text" class="form-control" id="t1" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="t2" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="t3" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="t4" placeholder="Especifique" >
+                    <input type="text" class="form-control" id="t5" placeholder="Especifique" >
+                </div>
+                
+                
+            </div>
+            <p>Estudios que efectua en la actualidad</p>
+            <div class="form-row">
+                
+                <div class="form-group col-md-3">
+                    <label for="escu">Escuela</label>
+                    <input class="form-control  " id="nesc" placeholder="Especifique" >
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="horario">Horario</label>
+                    <input class="form-control  " id="hr" placeholder="Especifique" >
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="carrera">Carrera</label>
+                    <input class="form-control  " id="carr" placeholder="Especifique" >
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="grado">Grado</label>
+                    <input class="form-control  " id="grado" placeholder="Especifique" >
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- CONOCIMIENTOS GENERALES -->
+<div class="mb-3">
+    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#conocgen" aria-expanded="false" aria-controls="conocimientos">
+        <span id="toggle-icon-experiencia" class="mr-2">&#9650;</span>7. Conocimientos generales
+    </button>
+    <div class="collapse mt-3" id="conocgen">
+        <div class="bordered-box p-4">
+            <div class="form-row">
+                
+                <div class="form-group col-md-6">
+                    <label for="idioma">Sabes algun otro idioma:</label>
+                    <input type="text" class="form-control" id="idioma" placeholder="Ej. Ingles" >
+                    
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="oficina">Que funciones de oficina domina </label>
+                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
+                    
+                </div>
+                
+                
+                
+            </div>
+            <div class="form-row">
+                
+                <div class="form-group col-md-6">
+                    <label for="idioma">Maquinas de taller o oficina que sepa manejar</label>
+                    <input type="text" class="form-control" id="idioma" placeholder="Especifique" >
+                    
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="oficina">Software que domina </label>
+                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
+                    
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- EXPERIENCIA -->
+<div class="mb-3">
+    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#exp" aria-expanded="false" aria-controls="experiencia">
+        <span id="toggle-icon-experiencia" class="mr-2">&#9650;</span>8. Experiencia
+    </button>
+    <div class="collapse mt-3" id="exp">
+        <div class="bordered-box p-4">
+            <div class="form-row">
+                <p>¿Cuanto tiempo tiene sin laborar?</p>
+                <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
+                <div class="form-group col-md-3">
+                    <label for="idioma">Concepto</label>
+                    <span style="width: 100%;" class="input-group-text">Tiempo que presto servicio</span>
+                    <span style="width: 100%;" class="input-group-text">Nombre</span>
+                    <span style="width: 100%;" class="input-group-text">Direccion</span>
+                    <span style="width: 100%;" class="input-group-text">Telefono Jefe Directo</span>
+                    <span style="width: 100%;" class="input-group-text">Actividades </span>
+                    <span style="width: 100%;" class="input-group-text">Puesto </span>
+                    <span style="width: 100%;" class="input-group-text">Turno</span>
+                    <span style="width: 100%;" class="input-group-text">Sueldo</span>
+                    <span style="width: 100%;" class="input-group-text">Motivo de separacion</span>
+                    <span style="width: 100%;" class="input-group-text">Nombre jefe directo</span>
+                    <span style="width: 100%;" class="input-group-text">Puesto de jefe directo</span>
+
+                    
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="oficina">Empleo actual o ultimo </label>
+                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
+                    
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="oficina">Empleo anterior </label>
+                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
+                    
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="oficina">Empleo anterior </label>
+                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
+                    
+                </div>
+                
+                
+            </div>
+            <div class="form-row">
+                
+                <div class="form-group col-md-6">
+                    <label for="idioma">Maquinas de taller o oficina que sepa manejar</label>
+                    <input type="text" class="form-control" id="idioma" placeholder="Especifique" >
+                    
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="oficina">Software que domina </label>
+                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
+                    
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>
+
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('solicitudForm');
+            
+            // Cargar datos del localStorage si existen
+            if (localStorage.getItem('formData')) {
+                const data = JSON.parse(localStorage.getItem('formData'));
+                for (const [key, value] of Object.entries(data)) {
+                    if (form.querySelector(`#${key}`)) {
+                        form.querySelector(`#${key}`).value = value;
+                    }
+                }
+            }
+
+            // Guardar datos en localStorage al enviar el formulario
+            form.addEventListener('submit', function (event) {
+                // Verifica la validez del formulario antes de guardar en localStorage
+                if (form.checkValidity()) {
+                    const formData = new FormData(form);
+                    const data = {};
+                    formData.forEach((value, key) => {
+                        data[key] = value;
+                    });
+                    localStorage.setItem('formData', JSON.stringify(data));
+                } else {
+                    event.preventDefault(); // Previene el envío del formulario si no es válido
+                    event.stopPropagation(); // Detiene la propagación del evento
+                    form.classList.add('was-validated'); // Añade la clase de validación
+                }
+            });
+
+            // Cambiar icono según el estado del colapso
+            const toggleButton = document.querySelector('[data-toggle="collapse"]');
+            const toggleIcon = document.getElementById('toggle-icon');
+            toggleButton.addEventListener('click', function () {
+                if (toggleButton.getAttribute('aria-expanded') === 'true') {
+                    toggleIcon.innerHTML = '&#9650;'; // Flecha hacia arriba
+                } else {
+                    toggleIcon.innerHTML = '&#9660;'; // Flecha hacia abajo
+                }
+            });
+
+            // Mostrar/ocultar el campo de nacionalidad "Otro"
+            const nacionalidadOtroRadio = document.getElementById('nacionalidadOtro');
+            const nacionalidadOtroText = document.getElementById('nacionalidadOtroText');
+            nacionalidadOtroRadio.addEventListener('change', function () {
+                if (nacionalidadOtroRadio.checked) {
+                    nacionalidadOtroText.classList.remove('form-control-hidden');
+                } else {
+                    nacionalidadOtroText.classList.add('form-control-hidden');
+                }
+            });
+
+            // Mostrar/ocultar el campo de "Vive con" "Otro"
+            const viveConOtroRadio = document.getElementById('viveConOtro');
+            const viveConOtroText = document.getElementById('viveConOtroText');
+            viveConOtroRadio.addEventListener('change', function () {
+                if (viveConOtroRadio.checked) {
+                    viveConOtroText.classList.remove('form-control-hidden');
+                } else {
+                    viveConOtroText.classList.add('form-control-hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
