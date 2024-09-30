@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Formulario</title>
+    <style>
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            height: 200px; /* Ajusta el tamaño del logo aquí */
+            margin-right: 25px; /* Espacio entre el logo y el título */
+        }
+        .revision-codigo {
+            display: flex;
+            flex-direction: column; /* Coloca en línea vertical */
+            align-items: flex-start; /* Alinea a la izquierda */
+            margin-left: 20px; /* Añade un margen a la izquierda */
+        }
+        body {
+           background-color:whitesmoke;
+            background-size: cover; /* Para cubrir todo el body */
+            background-position: center; /* Centra la imagen */
+            height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+            display: flex; /* Centra el formulario verticalmente */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            color: rgb(7, 7, 7); /* Cambia el color del texto si es necesario */
+        }
+        .section-title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="media/qb.jpg" alt="Logo"> <!-- Cambia "logo.png" por la ruta de tu logo -->
+        <h2 class="flex-grow-1">REGISTRO DE MEJORA</h2>
+        <div class="revision-codigo">
+            <div>
+                <strong>Código:</strong> QB-FR-A-06-01
+            </div>
+            <div>
+                <strong>Rev:</strong> 05
+            </div>
+            <div>
+                <strong>Fecha de Emisión:</strong> 30-11-2017
+            </div>
+            <div>
+                <strong>Fecha de Revisión:</strong> 23-08-2023
+            </div>
+        </div>
+    </div>
+
+    <form>
+        <!-- Sección 1: Datos de la mejora -->
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="nombreMejora">Nombre de la Mejora</label>
+                <input type="text" class="form-control" id="nombreMejora" placeholder="Ingrese el nombre de la mejora">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo">
+            </div>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="mejoraGrupal">
+            <label class="form-check-label" for="mejoraGrupal">Mejora Grupal</label>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="puesto">Puesto</label>
+                <input type="text" class="form-control" id="puesto" placeholder="Ingrese su puesto">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="proceso">Proceso al que perteneces</label>
+                <select class="form-control" id="proceso">
+                    <option value="">Seleccione un proceso</option>
+                    <option value="Proceso 1">Administracion y Finanzas</option>
+                    <option value="Proceso 2">Comercializacion y Venta</option>
+                    <option value="Proceso 3">Control y mejora del servicio</option>
+                    <option value="Proceso 2">Gestion de Capital Humano</option>
+                    <option value="Proceso 3">Gestion de Infraestructura</option>
+                    <option value="Proceso 2">Gestion del Sistema de Calidad</option>
+                    <option value="Proceso 3">Planeacion del Servicio</option>
+                    <option value="Proceso 3">Planeacion y Direccion Estrategica</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="mejoras">Procesos de Mejora</label>
+                <input type="text" class="form-control" id="mejoras" placeholder="Ingrese los procesos de mejora">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="regiones">Regiones donde aplica la mejora</label>
+                <input type="text" class="form-control" id="regiones" placeholder="Ingrese las regiones">
+            </div>
+        </div>
+
+        <!-- Sección 2: Tipo de Mejora -->
+        <div class="section-title">
+            <h3>Tipo de Mejora y Beneficios </h3>
+        </div>
+        <div class="form-group">
+            <label for="tipoMejora">Rubro</label>
+            <select class="form-control" id="tipoMejora">
+                <option value="">Seleccione un tipo</option>
+                <option value="Tipo 1">Ahorro</option>
+                <option value="Tipo 2">Indirecta</option>
+                <option value="Tipo 3">Sistema</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label class="col-md-12">Selecciona las áreas de mejora:</label>
+            <div class="form-group col-md-4">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check1">
+                    <label class="form-check-label" for="check1">Genera un ahorro material</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check2">
+                    <label class="form-check-label" for="check2">Genera un ahorro economico</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check3">
+                    <label class="form-check-label" for="check3">Facilita el trabajo diario</label>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check4">
+                    <label class="form-check-label" for="check4">Ahorra tiempos</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check5">
+                    <label class="form-check-label" for="check5">Mejora el ambiente laboral</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check6">
+                    <label class="form-check-label" for="check6">Cambio en el beneficio de la organizacion </label>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check7">
+                    <label class="form-check-label" for="check7">Efectividad en tu proceso</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check8">
+                    <label class="form-check-label" for="check8">Área 8</label>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="texto1"> Beneficios Adicionales</label>
+                <input type="text" class="form-control" id="texto1" placeholder="Ingrese su comentario">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="texto2">Situacion Actual</label>
+                <input type="text" class="form-control" id="texto2" placeholder="Ingrese su comentario">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="texto3">Mejora Propuesta</label>
+                <input type="text" class="form-control" id="texto3" placeholder="Ingrese su comentario">
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <!-- Botones separados en la línea -->
+        <div class="d-flex justify-content-between">
+            <button type="button" class="btn btn-primary col-md-3">Enviar</button>
+            <button type="button" class="btn btn-success col-md-3">Cargar Análisis</button>
+            <button type="button" class="btn btn-danger col-md-3">Cancelar</button>
+        </div>
+        
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
