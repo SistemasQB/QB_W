@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Formulario con Divs</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra horizontalmente todo el contenido */
+        }
+        .section {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%; /* Asegura que ocupa el ancho completo */
+            max-width: 900px; /* Limita el ancho máximo */
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .left-div, .right-div, .center-div {
+            width: 30%;
+        }
+        .center-div {
+            margin: 0 10px;
+        }
+        .left-div, .right-div {
+            display: flex;
+            flex-direction: column; /* Alinea los elementos en columna */
+        }
+        .form-check {
+            margin-bottom: 15px; /* Espacio entre checkboxes */
+            font-size: 1.2em; /* Aumenta el tamaño del texto */
+        }
+        .form-check-input {
+            width: 1.5em; /* Aumenta el tamaño del checkbox */
+            height: 1.5em; /* Aumenta el tamaño del checkbox */
+        }
+        .form-check-label {
+            margin-left: 10px; /* Aumenta el margen izquierdo del label */
+        }
+        .horizontal-group {
+            display: flex;
+            justify-content: space-between; /* Espacia los elementos */
+        }
+        .horizontal-group .form-group {
+            flex: 1; /* Hace que los campos ocupen el mismo espacio */
+            margin-right: 10px; /* Espacio entre los campos */
+        }
+        .horizontal-group .form-group:last-child {
+            margin-right: 0; /* Elimina el margen del último campo */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="section">
+        <h3 style="text-align: center;"> REQUISICION DE COMPRA</h3>
+        <br>
+        <br>
+        <div class="form-row">
+            <div class="left-div">
+                <label>Rentabilidad:</label>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check1">
+                    <label class="form-check-label" for="check1">Gatos Directos</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check2">
+                    <label class="form-check-label" for="check2">Gastos Indirectos Operativos</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check3">
+                    <label class="form-check-label" for="check3">Gastos Indirectos Administrativos</label>
+                </div>
+            </div>
+            <div class="center-div">
+                <div class="form-group">
+                    <label for="dropdown3">Responsable que Autoriza</label>
+                    <select class="form-control" id="dropdown3">
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="1">Atraccion de Capital Humano</option>
+                        <option value="2">Calidad</option>
+                        <option value="1">Capturacion</option>
+                        <option value="2">Compras</option>
+                        <option value="1">Facturacion y Cobranza</option>
+                        <option value="2">Gastos</option>
+                        <option value="1">Logistica Vehicular</option>
+                        <option value="2">Lujuan Davalos Omar Alejandro</option>
+                        <option value="1">Operaciones</option>
+                        <option value="2">Osuna Rodriguez Elias</option>
+                        <option value="1">Servicio al Cliente</option>
+                        <option value="2">Tecnologias de la Informacion</option>
+                        <option value="1">Ventas</option>
+                        <option value="2">Vieyra Gonzalez Laura Susana</option>
+                        <option value="1">Wong Castañeda Jose Arturo</option>
+                        <option value="2">Wong Lopez Mirna Ivette</option>
+
+                    </select>
+                </div>
+                <div class="horizontal-group">
+                    <div class="form-group">
+                        <label for="dropdown1">Proceso </label>
+                        <select class="form-control" id="dropdown1">
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="1">Administracion y finanzas</option>
+                            <option value="2">Comercializacion y venta </option>
+                            
+                            <option value="1">Control y Mejora del Servicio</option>
+                            <option value="2">Ejecucion del servicio </option>
+                            
+                            <option value="1">Gestion de Capital Humano</option>
+                            <option value="2">Gestion de Infraestructura </option>
+                            
+                            <option value="1">Planeacion del Servico</option>
+                            <option value="2">Planeacion y Direccion Estrategica </option>
+                            <option value="1">Sistema de Gestion de Calidad</option>
+                            
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dropdown2">Departamento</label>
+                        <select class="form-control" id="dropdown2">
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="1">Facturacion y cobranza</option>
+                            <option value="2">Comercializacion y venta</option>
+                            <option value="1">Control y mejora del servicio</option>
+                            <option value="2">Ejecucion del servicio</option>
+                            <option value="1">Facturacion y cobranza</option>
+                            <option value="2">ACH</option>
+                            <option value="1">Compras</option>
+                            <option value="2">Servicio al cliente</option>
+                            <option value="1">Alta direccion</option>
+                            <option value="2">Sistema de gestion de calidad</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="campoTexto">Asunto</label>
+                    <input type="text" class="form-control" id="campoTexto" placeholder="Escribe aquí...">
+                </div>
+            </div>
+            <div class="right-div">
+                <div class="form-group">
+                    <label for="campoTexto2">Orden de Serv</label>
+                    <input type="text" class="form-control" id="campoTexto2" placeholder="Escribe aquí...">
+                </div>
+                <div class="form-group">
+                    <label for="dropdown4">Planta</label>
+                    <select class="form-control" id="dropdown4">
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="1">Opción A</option>
+                        <option value="2">Opción B</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dropdown5">Region</label>
+                    <select class="form-control" id="dropdown5">
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="1">Aguascalientes</option>
+                        <option value="2">CD Juarez</option>
+                        <option value="1">CD Victoria</option>
+                        <option value="2">Celaya</option>
+                        <option value="1">Chihuahua</option>
+                        <option value="2">Durango</option>
+                        <option value="1">Fresnillo</option>
+                        <option value="2">Honda</option>
+                        <option value="1">Irapuato</option>
+                        <option value="2">Leon</option>
+                        <option value="1">Linares</option>
+                        <option value="2">Meoqui</option>
+                        <option value="1">Monterrey</option>
+                        <option value="2">Nuevo Laredo</option>
+                        <option value="1">Otros</option>
+                        <option value="2">Queretaro</option>
+                        <option value="1">Reynosa</option>
+                        <option value="2">Saltillo</option>
+                        <option value="1">Silao</option>
+                        <option value="2">SLP</option>
+                        <option value="1">Torreon</option>
+                        <option value="2">Zacatecas</option>
+                        <option value="1">Zapata</option>
+                        
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Sección 2</h3>
+        <p>Aquí puedes agregar más contenido para la segunda sección.</p>
+    </div>
+    
+    <div class="section">
+        <h3>Sección 3</h3>
+        <p>Aquí puedes agregar más contenido para la tercera sección.</p>
+    </div>
+    
+    <div class="section">
+        <h3>Sección 4</h3>
+        <p>Aquí puedes agregar más contenido para la cuarta sección.</p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
