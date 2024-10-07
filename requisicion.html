@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Formulario con Divs</title>
     <style>
         body {
             background-color: whitesmoke;
             padding: 20px;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Centra horizontalmente todo el contenido */
         }
         .section {
             background-color: white;
@@ -21,8 +17,8 @@
             border-radius: 5px;
             padding: 20px;
             margin-bottom: 20px;
-            width: 100%; /* Asegura que ocupa el ancho completo */
-            max-width: 900px; /* Limita el ancho máximo */
+            width: 100%;
+            max-width: 900px;
         }
         .form-row {
             display: flex;
@@ -34,31 +30,22 @@
         .center-div {
             margin: 0 10px;
         }
-        .left-div, .right-div {
-            display: flex;
-            flex-direction: column; /* Alinea los elementos en columna */
-        }
-        .form-check {
-            margin-bottom: 15px; /* Espacio entre checkboxes */
-            font-size: 1.2em; /* Aumenta el tamaño del texto */
-        }
-        .form-check-input {
-            width: 1.5em; /* Aumenta el tamaño del checkbox */
-            height: 1.5em; /* Aumenta el tamaño del checkbox */
-        }
-        .form-check-label {
-            margin-left: 10px; /* Aumenta el margen izquierdo del label */
-        }
         .horizontal-group {
             display: flex;
-            justify-content: space-between; /* Espacia los elementos */
+            justify-content: space-between;
         }
-        .horizontal-group .form-group {
-            flex: 1; /* Hace que los campos ocupen el mismo espacio */
-            margin-right: 10px; /* Espacio entre los campos */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
-        .horizontal-group .form-group:last-child {
-            margin-right: 0; /* Elimina el margen del último campo */
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        .total-container {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -66,22 +53,22 @@
 
 <div class="container">
     <div class="section">
-        <h3 style="text-align: center;"> REQUISICION DE COMPRA</h3>
+        <h3 style="text-align: center;">REQUISICION DE COMPRA</h3>
         <br>
         <br>
         <div class="form-row">
             <div class="left-div">
                 <label>Rentabilidad:</label>
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="check1">
-                    <label class="form-check-label" for="check1">Gatos Directos</label>
+                    <input type="checkbox" class="form-check-input" id="check1" onclick="onlyOne(this)">
+                    <label class="form-check-label" for="check1">Gastos Directos</label>
                 </div>
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="check2">
+                    <input type="checkbox" class="form-check-input" id="check2" onclick="onlyOne(this)">
                     <label class="form-check-label" for="check2">Gastos Indirectos Operativos</label>
                 </div>
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="check3">
+                    <input type="checkbox" class="form-check-input" id="check3" onclick="onlyOne(this)">
                     <label class="form-check-label" for="check3">Gastos Indirectos Administrativos</label>
                 </div>
             </div>
@@ -90,59 +77,19 @@
                     <label for="dropdown3">Responsable que Autoriza</label>
                     <select class="form-control" id="dropdown3">
                         <option value="" disabled selected>Seleccione una opción</option>
-                        <option value="1">Atraccion de Capital Humano</option>
-                        <option value="2">Calidad</option>
-                        <option value="3">Capturacion</option>
-                        <option value="4">Compras</option>
-                        <option value="5">Facturacion y Cobranza</option>
-                        <option value="6">Gastos</option>
-                        <option value="7">Logistica Vehicular</option>
-                        <option value="8">Lujuan Davalos Omar Alejandro</option>
-                        <option value="9">Operaciones</option>
-                        <option value="10">Osuna Rodriguez Elias</option>
-                        <option value="11">Servicio al Cliente</option>
-                        <option value="12">Tecnologias de la Informacion</option>
-                        <option value="13">Ventas</option>
-                        <option value="14">Vieyra Gonzalez Laura Susana</option>
-                        <option value="15">Wong Castañeda Jose Arturo</option>
-                        <option value="16">Wong Lopez Mirna Ivette</option>
-
                     </select>
                 </div>
                 <div class="horizontal-group">
                     <div class="form-group">
-                        <label for="dropdown1">Proceso </label>
+                        <label for="dropdown1">Proceso</label>
                         <select class="form-control" id="dropdown1">
                             <option value="" disabled selected>Seleccione una opción</option>
-                            <option value="1">Administracion y finanzas</option>
-                            <option value="2">Comercializacion y venta </option>
-                            
-                            <option value="3">Control y Mejora del Servicio</option>
-                            <option value="4">Ejecucion del servicio </option>
-                            
-                            <option value="5">Gestion de Capital Humano</option>
-                            <option value="6">Gestion de Infraestructura </option>
-                            
-                            <option value="7">Planeacion del Servico</option>
-                            <option value="8">Planeacion y Direccion Estrategica </option>
-                            <option value="9">Sistema de Gestion de Calidad</option>
-                            
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="dropdown2">Departamento</label>
                         <select class="form-control" id="dropdown2">
                             <option value="" disabled selected>Seleccione una opción</option>
-                            <option value="1">Facturacion y cobranza</option>
-                            <option value="2">Comercializacion y venta</option>
-                            <option value="3">Control y mejora del servicio</option>
-                            <option value="4">Ejecucion del servicio</option>
-                            <option value="5">Facturacion y cobranza</option>
-                            <option value="6">ACH</option>
-                            <option value="7">Compras</option>
-                            <option value="8">Servicio al cliente</option>
-                            <option value="9">Alta direccion</option>
-                            <option value="10">Sistema de gestion de calidad</option>
                         </select>
                     </div>
                 </div>
@@ -160,90 +107,12 @@
                     <label for="dropdown4">Planta</label>
                     <select class="form-control" id="dropdown4">
                         <option value="" disabled selected>Seleccione una opción</option>
-                        <option value="1">ABC Cobro</option>
-                        <option value="2">ABC Tech</option>
-                        <option value="3">Aceway </option>
-                        <option value="4">Aceway Cobro</option>
-                        <option value="5">Acombaro Cobro</option>
-                        <option value="6">Adient</option>
-                        <option value="7">Advance</option>
-                        <option value="8">Alesba Cobro</option>
-                        <option value="9">Alphametal</option>
-                        <option value="10">Amphenol</option>
-                        <option value="11">Amphenol Cobro</option>
-                        <option value="12">Aptiv 47 Cobro</option>
-                        <option value="13">Aptiv Centec 1</option>
-                        <option value="14">Aptiv Centec 2</option>
-                        <option value="15">Aptiv Centec 2 Cobro</option>
-                        <option value="16">Aptiv Centec 3</option>
-                        <option value="17">Aptiv Chihuahua</option>
-                        <option value="18">Aptiv Durango 1</option>
-                        <option value="19">Aptiv Durango 2</option>
-                        <option value="20">Aptiv Durango Cobro</option>
-                        <option value="21">Aptiv Durango Cobro</option>
-                        <option value="22">Aptiv Fllo 1</option>
-                        <option value="23">Aptiv Fllo 2</option>
-                        <option value="24">Aptiv Fllo 3</option>
-                        <option value="25">Aptiv Fllo Cobro</option>
-                        <option value="26">Aptiv Frontera</option>
-                        <option value="27">Aptiv Frontera Cobro</option>
-                        <option value="28">Aptiv Guadalupe</option>
-                        <option value="29">Aptiv Guadalupe Cobro</option>
-                        <option value="30">Aptiv Honduras</option>
-                        <option value="31">Aptiv Juarez</option>
-                        <option value="14">Aptiv Juarez Cobro</option>
-                        <option value="15">Aptiv Laredo</option>
-                        <option value="16">Aptiv Laredo Cobro</option>
-                        <option value="17">Aptiv Linares</option>
-                        <option value="18">Aptiv Linares Cobro</option>
-                        <option value="19">Aptiv Meoqui</option>
-                        <option value="20">Aptiv Meoqui Cobro</option>
-                        <option value="21">Aptiv Nuevo Leon Cobro</option>
-                        <option value="22">Aptiv Parral</option>
-                        <option value="23">Aptiv Reynosa</option>
-                        <option value="24">Aptiv Reynosa Cobro</option>
-                        <option value="25">Aptiv Tijuana</option>
-                        <option value="26">Aptiv Victoria 1</option>
-                        <option value="27">Aptiv Victoria 2</option>
-                        <option value="27">Aptiv Victoria Cobro</option>
-                        <option value="28">Aptiv Yazaki MTY</option>
-                        <option value="29">Aptiv Zac 1</option>
-                        <option value="29">Aptiv Zac 1 Cobro</option>
-                        <option value="29">Aptiv Zac 2</option>
-                        <option value="29">Aptiv Zac 2 Cobro</option>
-                        <option value="30">Arnecom Anahuac</option>
-                        <option value="30">Arnecom Anahuac  Cobro</option>
-                        <option value="30">Arnecom Anahuac</option>
-                        
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="dropdown5">Region</label>
                     <select class="form-control" id="dropdown5">
                         <option value="" disabled selected>Seleccione una opción</option>
-                        <option value="1">Aguascalientes</option>
-                        <option value="2">CD Juarez</option>
-                        <option value="3">CD Victoria</option>
-                        <option value="4">Celaya</option>
-                        <option value="5">Chihuahua</option>
-                        <option value="6">Durango</option>
-                        <option value="7">Fresnillo</option>
-                        <option value="8">Honda</option>
-                        <option value="9">Irapuato</option>
-                        <option value="10">Leon</option>
-                        <option value="11">Linares</option>
-                        <option value="12">Meoqui</option>
-                        <option value="13">Monterrey</option>
-                        <option value="14">Nuevo Laredo</option>
-                        <option value="15">Otros</option>
-                        <option value="16">Queretaro</option>
-                        <option value="17">Reynosa</option>
-                        <option value="18">Saltillo</option>
-                        <option value="19">Silao</option>
-                        <option value="20">SLP</option>
-                        <option value="21">Torreon</option>
-                        <option value="22">Zacatecas</option>
-                        <option value="23">Zapata</option>
-                        
                     </select>
                 </div>
             </div>
@@ -251,20 +120,287 @@
     </div>
 
     <div class="section">
-        <h3>Sección 2</h3>
-        <p>Aquí puedes agregar más contenido para la segunda sección.</p>
+        <h4>Descripcion de la orden</h4>
+        <div class="horizontal-group">
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <input type="text" class="form-control" id="descripcion" placeholder="Descripción Detallada" required>
+            </div>
+            <div class="form-group">
+                <label for="numero">Unidad:</label>
+                <input type="number" class="form-control" id="numero" required>
+            </div>
+            <div class="form-group">
+                <label for="texto1">Precio unitario con IVA:</label>
+                <input type="text" class="form-control" id="texto1" required>
+            </div>
+            <div class="form-group">
+                <label for="texto2">Precio Total con IVA:</label>
+                <input type="text" class="form-control" id="texto2" required>
+            </div>
+            <button class="btn btn-primary" onclick="agregarFila()">
+                <i class="fa-solid fa-notes-medical"></i>
+            </button>
+        </div>
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Descripción Detallada</th>
+                    <th>Unidad</th>
+                    <th>Precio unitario con IVA</th>
+                    <th>Precio Total con IVA</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <div class="total-container">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" class="form-control" id="fecha">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="total">Total:</label>
+                    <input type="text" class="form-control" id="total" placeholder="Total" readonly>
+                </div>
+            </div>
+        </div>
     </div>
     
     <div class="section">
-        <h3>Sección 3</h3>
-        <p>Aquí puedes agregar más contenido para la tercera sección.</p>
+        <h3>Justificaciones</h3>
+        
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="justificacion1">Detallar situacion actual:</label>
+                <input type="text" class="form-control" id="justificacion1" placeholder="Escribe la justificación 1" style="height: 80px;">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="justificacion2">Detallar espectativa:</label>
+                <input type="text" class="form-control" id="justificacion2" placeholder="Escribe la justificación 2" style="height: 80px;">
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="justificacion3">Comentarios adicionales:</label>
+                <input type="text" class="form-control" id="justificacion3" placeholder="Escribe la justificación 3" style="height: 80px;">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="imagen">Agregar Imagen:</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="imagen" accept="image/*" onchange="updateImagePreview()">
+                    <label class="custom-file-label" for="imagen">Selecciona una imagen...</label>
+                </div>
+                <div class="mt-2">
+                    <img id="imagePreview" src="#" alt="Vista previa de la imagen" style="display: none; max-width: 300px; max-height: 300px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                </div>
+            </div>
+        </div>
     </div>
     
     <div class="section">
-        <h3>Sección 4</h3>
-        <p>Aquí puedes agregar más contenido para la cuarta sección.</p>
+        <div class="d-flex align-items-center">
+            <div class="form-group col-md-6 me-3">
+                <label for="cuenta">Tarjeta o Cuenta:</label>
+                <input type="text" class="form-control" id="cuenta" required>
+            </div>
+            
+            <div class="me-3">
+               
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check4" onclick="toggleModal(this)">
+                    <label class="form-check-label" for="check4">Visualizar Rentabilidades</label>
+                </div>
+            </div>
+            
+            <button class="btn btn-success" onclick="enviarInformacion()">Enviar Información</button>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="rentabilidadModal" tabindex="-1" aria-labelledby="rentabilidadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="rentabilidadModalLabel">Rentabilidades</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5 >Gastos Directos</h5>
+                <p>Todo lo cotizable en bc</p>
+                <ul>
+                    <li>Casas, bodegas</li>
+                    <li>Cobro a cliente</li>
+                    <li>Documentacion de entrada</li>
+                    <li>Gastos de viaje personal operativo</li>
+                    <li>Httas, consumilbles, papeleria</li>
+                    <li>Inspectores</li>
+                    <li>Lonches</li>
+                    <li>Mobiliario propio del proyecto</li>
+                    <li>Telefonos, internet, laptops</li>
+                    <li>Transporte</li>
+                    <li>Uniformes, EPP</li>
+
+                </ul>
+                <h5 >Gastos Indirectos Operativos</h5>
+                
+                <ul>
+                    <li>Casas, bodegas</li>
+                    <li>Cobro a cliente</li>
+                    <li>Documentacion de entrada</li>
+                    <li>Gastos de viaje personal operativo</li>
+                    <li>Httas, consumilbles, papeleria</li>
+                    <li>Inspectores</li>
+                    <li>Lonches</li>
+                    <li>Mobiliario propio del proyecto</li>
+                    <li>Telefonos, internet, laptops</li>
+                    <li>Transporte</li>
+                    <li>Uniformes, EPP</li>
+
+                </ul>
+                <h5 >Gastos Indirectos Administrativos</h5>
+                <p>Gastos Administrativos</p>
+                <ul>
+                    <li>Autos administrativos</li>
+                    <li>Gastos admon(comisiones, SGMM, honorarios)</li>
+                    <li>Mobiliario administrativo</li>
+                    <li>Nominas, captura, SC, Gastos, GCH, Regionales</li>
+                    <li>Oficina matriz y regionales</li>
+                    <li>Telefonos, internet, laptops</li>
+                    <li>Viajes Administrativos</li>
+                    
+
+                </ul>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+    function updateLabel() {
+        const input = document.getElementById('imagen');
+        const label = document.querySelector('.custom-file-label');
+        label.textContent = input.files.length > 0 ? input.files[0].name : 'Selecciona una imagen...';
+    }
+
+    function updateImagePreview() {
+        const input = document.getElementById('imagen');
+        const preview = document.getElementById('imagePreview');
+
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            }
+
+            reader.readAsDataURL(input.files[0]);
+            updateLabel();
+        } else {
+            preview.style.display = 'none';
+        }
+    }
+
+    function toggleModal(checkbox) {
+        if (checkbox.checked) {
+            $('#rentabilidadModal').modal('show');
+        } else {
+            $('#rentabilidadModal').modal('hide');
+        }
+    }
+
+    function enviarInformacion() {
+        const responsable = document.getElementById('dropdown3').value;
+        const asunto = document.getElementById('campoTexto').value;
+        const ordenServ = document.getElementById('campoTexto2').value;
+        const descripcion = document.getElementById('descripcion').value;
+        const unidad = document.getElementById('numero').value;
+        const precioUnitario = document.getElementById('texto1').value;
+        const precioTotal = document.getElementById('texto2').value;
+        const fecha = document.getElementById('fecha').value;
+        const total = document.getElementById('total').value;
+        const justificacion1 = document.getElementById('justificacion1').value;
+        const justificacion2 = document.getElementById('justificacion2').value;
+        const justificacion3 = document.getElementById('justificacion3').value;
+        const cuenta = document.getElementById('cuenta').value;
+
+        // Captura del checklist
+        const aprobacionFinanciera = document.getElementById('check4').checked ? 'Sí' : 'No';
+        const aprobacionCompras = document.getElementById('check5') ? 'Sí' : 'No';
+        const revisionTecnica = document.getElementById('check6') ? 'Sí' : 'No';
+
+        const info = `
+            Responsable: ${responsable}
+            Asunto: ${asunto}
+            Orden de Servicio: ${ordenServ}
+            Descripción: ${descripcion}
+            Unidad: ${unidad}
+            Precio Unitario: ${precioUnitario}
+            Precio Total: ${precioTotal}
+            Fecha: ${fecha}
+            Total: ${total}
+            Justificación 1: ${justificacion1}
+            Justificación 2: ${justificacion2}
+            Justificación 3: ${justificacion3}
+            Cuenta: ${cuenta}
+            Aprobación Financiera: ${aprobacionFinanciera}
+            Aprobación de Compras: ${aprobacionCompras}
+            Revisión Técnica: ${revisionTecnica}
+        `;
+
+        alert(info); // Aquí podrías enviar la información a un servidor
+    }
+
+    function onlyOne(checkbox) {
+        var checkboxes = document.querySelectorAll('.form-check-input');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) {
+                item.checked = false;
+            }
+        });
+    }
+
+    function agregarFila() {
+        const descripcion = document.getElementById('descripcion').value;
+        const numero = document.getElementById('numero').value;
+        const texto1 = document.getElementById('texto1').value;
+        const texto2 = document.getElementById('texto2').value;
+
+        if (descripcion && numero && texto1 && texto2) {
+            const tabla = document.getElementById('tabla').getElementsByTagName('tbody')[0];
+            const nuevaFila = tabla.insertRow();
+
+            const celdaDescripcion = nuevaFila.insertCell(0);
+            const celdaNumero = nuevaFila.insertCell(1);
+            const celdaTexto1 = nuevaFila.insertCell(2);
+            const celdaTexto2 = nuevaFila.insertCell(3);
+
+            celdaDescripcion.textContent = descripcion;
+            celdaNumero.textContent = numero;
+            celdaTexto1.textContent = texto1;
+            celdaTexto2.textContent = texto2;
+
+            document.getElementById('descripcion').value = '';
+            document.getElementById('numero').value = '';
+            document.getElementById('texto1').value = '';
+            document.getElementById('texto2').value = '';
+        } else {
+            alert("Por favor, completa todos los campos.");
+        }
+    }
+</script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
