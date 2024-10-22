@@ -58,11 +58,12 @@
         }
         .signature {
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Centrar los elementos de firma */
             margin-top: 40px;
         }
         .signature div {
             text-align: center;
+            margin: 0 20px; /* Espacio entre las secciones de firma */
         }
         .input-section {
             margin: 20px 0; /* Espacio entre el título y este div */
@@ -85,12 +86,17 @@
             width: 100%; /* Hacer que los campos de entrada ocupen todo el ancho */
             max-width: 300px; /* Limitar el ancho máximo */
         }
+        .table-input {
+            width: 100%; /* Hacer que los campos de entrada ocupen todo el ancho de la celda */
+            border: none;
+            outline: none;
+        }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <img src="media/firma1-removebg-preview.png" alt="Logo"> <!-- Cambia "logo.png" por la ruta de tu logo -->
+        <img src="media/firma1-removebg-preview.png" alt="Logo">
         <div class="header-info">
             <div class="field">
                 <label>Folio:</label>
@@ -137,8 +143,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>PANTALLA 32"</td>
-                    <td>QB-IT-0256</td>
+                    <td><input type="text" class="table-input" value="PANTALLA 32"></td>
+                    <td><input type="text" class="table-input" value="QB-IT-0256"></td>
                 </tr>
                 <!-- Puedes agregar más filas aquí si es necesario -->
             </tbody>
@@ -167,24 +173,19 @@
         Me comprometo a devolver en óptimas condiciones a la empresa en caso de renuncia o desvinculación antes de dejar las instalaciones de Quality Bolca. Declaro estar en conocimiento y comprometerme a cumplir la Política de Uso de Asignaciones Laborales.</p>
     </div>
 
-    <div class="signature" style="margin-top: 40px; text-align: center;">
+    <div class="signature">
         <div>
             <label>Fecha de salida:</label><br>
-            <input type="text" style="border-bottom: 1px solid #000; width: 200px; text-align: center;">
+            <input type="text" style="border-bottom: 1px solid #000; width: 150px; text-align: center;">
         </div>
         <div>
             <label>Fecha de entrega:</label><br>
-            <input type="text" style="border-bottom: 1px solid #000; width: 250px; text-align: center;">
+            <input type="text" style="border-bottom: 1px solid #000; width: 150px; text-align: center;">
         </div>
         <div>
             <label>Firma:</label><br>
-           
             <span>____________</span>
         </div>
     </div>
-    
-    
-    
-
 </body>
 </html>
