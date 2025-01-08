@@ -744,82 +744,59 @@
             <div class="form-row">
                 <p>¿Cuanto tiempo tiene sin laborar?</p>
                 <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                <div class="form-group col-md-3">
-                    <label for="idioma">Concepto</label>
-                    <span style="width: 100%;" class="input-group-text">Tiempo que presto servicio</span>
-                    <span style="width: 100%;" class="input-group-text">Nombre</span>
-                    <span style="width: 100%;" class="input-group-text">Direccion</span>
-                    <span style="width: 100%;" class="input-group-text">Telefono Jefe Directo</span>
-                    <span style="width: 100%;" class="input-group-text">Actividades </span>
-                    <span style="width: 100%;" class="input-group-text">Puesto </span>
-                    <span style="width: 100%;" class="input-group-text">Turno</span>
-                    <span style="width: 100%;" class="input-group-text">Sueldo</span>
-                    <span style="width: 100%;" class="input-group-text">Motivo de separacion</span>
-                    <span style="width: 100%;" class="input-group-text">Nombre jefe directo</span>
-                    <span style="width: 100%;" class="input-group-text">Puesto de jefe directo</span>
-
+                <div class="container mt-5">
                     
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="oficina">Empleo actual o ultimo </label>
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Inicial, Final" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="oficina">Empleo anterior </label>
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Inicial, Final" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="oficina">Empleo anterior </label>
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Inicial, Final" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    <input type="text" class="form-control" id="oficina" placeholder="Especifique" >
-                    
-                </div>
+                    <!-- Tabla de conceptos -->
+                    <table class="table table-bordered" id="empleoTabla">
+                        <thead>
+                            <tr>
+                                
+                                <th>Tiempo que prestó servicio</th>
+                                <th>Nombre</th>
+                                <th>Dirección</th>
+                                <th>Teléfono Jefe Directo</th>
+                                <th>Actividades</th>
+                                <th>Puesto</th>
+                                <th>Turno</th>
+                                <th>Sueldo</th>
+                                <th>Motivo de separación</th>
+                                <th>Nombre jefe directo</th>
+                                <th>Puesto de jefe directo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Filas dinámicas de datos (vacías inicialmente) -->
+                            <tr>
+                                <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                                <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                                <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                                <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                                <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                                <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                                <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                                <td><input type="text" class="form-control" placeholder="Inicial, Final" /></td>
+                                <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                                <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                                <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 
-                
-            </div>
+                    <!-- Botón para agregar nuevas filas -->
+                    <button type="button" class="btn btn-primary" id="agregarFila">Agregar fila</button>
+                </div>
 
             <div class="form-row">
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-4">
                     <label for="inf">Podriamos solicitar informes de usted</label>
                     <div class="form-check form-check-inline">
                         <input type="radio" class="form-check-input" id="credinfs" name="sic" value="Si" required>
-                        <label class="form-check-label" for="servs">Si</label>
+                        <label class="form-check-label" for="credinfs">Si</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" id="credinfn" name="nacionalidad" value="no" required>
-                        <label class="form-check-label" for="servn">No</label>
-                        <input type="text" class="form-control form-control-small ml-2 form-control-hidden" id="nacionalidadOtroText" placeholder="Especificar">
+                        <input type="radio" class="form-check-input" id="credinfn" name="sic" value="No" required>
+                        <label class="form-check-label" for="credinfn">No</label>
+                        <input type="text" class="form-control form-control-small ml-2 form-control-hidden" id="nacionalidadOtroText" placeholder="Especificar" style="display: none;">
                     </div>
                 </div>
                 <div class="form-group col-md-10">
@@ -898,14 +875,29 @@
                         </div>
 
 
-                        <label for="sexo">¿Tienes disponibilidad de horario (Rolar turnos) ?</label>
+                        <label for="turno">¿Tienes disponibilidad de horario (Rolar turnos)?</label>
                         <div class="form-check form-check-inline">
                             <input type="radio" class="form-check-input" id="si" name="turno" value="si" required>
-                            <label class="form-check-label" for="si"> Si </label>      
+                            <label class="form-check-label" for="si">Si</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input type="radio" class="form-check-input" id="no" name="turno" value="no" required>
                             <label class="form-check-label" for="no">No</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label" for="raz">Razones:   </label>
+                            <input class="form-control  " id="raz" placeholder="Especifique" >
+                        </div>
+
+                        <!-- Nueva pregunta de disponibilidad para viajar -->
+                        <label for="viajar">¿Tienes disponibilidad para viajar?</label>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="viajar_si" name="viajar" value="si" required>
+                            <label class="form-check-label" for="viajar_si">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="viajar_no" name="viajar" value="no" required>
+                            <label class="form-check-label" for="viajar_no">No</label>
                         </div>
 
                         <div class="form-group">
@@ -1306,6 +1298,75 @@
     // Función que copia el texto del textarea al input
     textarea.addEventListener('input', function() {
         input.value = textarea.value; // Copia el contenido del textarea al input
+    });
+
+
+    $(document).ready(function() {
+            // Función para agregar un nuevo campo de teléfono cuando el botón es presionado
+            $('#agregar-telefono').on('click', function() {
+                // Contador para los nuevos campos de teléfono
+                var contador = $('#formulario-contactos .form-row').length + 1;
+
+                // Crear un nuevo conjunto de campos de formulario
+                var newField = `
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="nombre${contador}">Nombre de quien responde:</label>
+                            <input type="text" class="form-control" id="nombre${contador}" placeholder="Ingresa el nombre" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="pare${contador}">Parentesco:</label>
+                            <input type="text" class="form-control" id="pare${contador}" placeholder="Especifique" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="tel${contador}">Telefono:</label>
+                            <input type="text" class="form-control telefono" id="tel${contador}" placeholder="Ingresa el numero telefonico" required>
+                        </div>
+                    </div>
+                `;
+                
+                // Añadir el nuevo conjunto de campos al formulario
+                $('#formulario-contactos').append(newField);
+            });
+        });
+
+        $(document).ready(function() {
+        // Función para agregar una nueva fila al hacer clic en el botón
+        $('#agregarFila').on('click', function() {
+            // Crear una nueva fila con los mismos campos que la original
+            var nuevaFila = `
+                <tr>
+                    <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                    <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                    <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                    <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                    <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                    <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                    <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                    <td><input type="text" class="form-control" placeholder="Inicial, Final" /></td>
+                    <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                    <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                    <td><input type="text" class="form-control" placeholder="Especifique" /></td>
+                </tr>
+            `;
+
+            // Añadir la nueva fila a la tabla
+            $('#empleoTabla tbody').append(nuevaFila);
+        });
+    });
+
+    // Mostrar u ocultar el campo de texto cuando se selecciona "No"
+    document.getElementById('credinfn').addEventListener('change', function() {
+        if (this.checked) {
+            document.getElementById('nacionalidadOtroText').style.display = 'inline-block';
+        }
+    });
+
+    // Ocultar el campo de texto si se selecciona "Si"
+    document.getElementById('credinfs').addEventListener('change', function() {
+        if (this.checked) {
+            document.getElementById('nacionalidadOtroText').style.display = 'none';
+        }
     });
 
     </script>
