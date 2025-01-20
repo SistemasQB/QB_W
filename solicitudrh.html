@@ -1467,24 +1467,7 @@
             }
         });
 
-        function imprimirFormulario() {
-            // Crear una copia del documento
-            let contenido = document.body.innerHTML;
-
-            // Eliminar cualquier contenido dentro de las etiquetas <script>
-            contenido = contenido.replace(/<script[\s\S]*?>[\s\S]*?<\/script>/gi, '');
-
-            // Abrir una nueva ventana y escribir el contenido limpio
-            let ventanaImpresion = window.open('', '', 'height=600,width=800');
-            ventanaImpresion.document.write('<html><head><title>Impresión de Solicitud</title></head><body>');
-            ventanaImpresion.document.write(contenido);
-            ventanaImpresion.document.write('</body></html>');
-
-            // Esperar a que el contenido se cargue y luego llamar a window.print()
-            ventanaImpresion.document.close();
-            ventanaImpresion.print();
-        }
-
+       
         
     </script>
 </html>
