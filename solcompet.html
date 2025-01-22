@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMATO DE SOLICITUD DE EMPLEO</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="solicitudForm">
+        <div class="container mt-5">
+            <!-- Encabezado con logotipo, información y datos adicionales -->
+            <div class="row mb-4 bordered-box">
+                <div class="col-md-6 text-center">
+                    <p style="text-align: left;">ENTREVISTA POR COMPETENCIAS</p>
+                </div>
+                <div class="col-md-4">
+                    
+                    <div class="form-group">
+                        <label for="entrevistado">NOMBRE DEL ENTREVISTADO</label>
+                        <input type="text" class="form-control" id="sueldo" placeholder="Ingresa el nombre del entrevistado"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="entrevistado">JUICIO FINAL / JUSTIFICACION </label>
+                        <input type="text" class="form-control" id="sueldo" placeholder="Ingresa los comentarios "
+                            required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ventanas Colapsables -->
+            <div class="mb-3">
+                <!-- Ventana 1: Datos Personales -->
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#datosPersonales"
+                    aria-expanded="true" aria-controls="datosPersonales">
+                    <span id="toggle-icon" class="mr-2">&#9650;</span>1. Datos Personales
+                </button>
+                <div class="collapse show mt-3" id="datosPersonales">
+                    <div class="bordered-box p-4">
+                        <!-- Nuevas preguntas -->
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="nombre">¿Cómo te gusta que te digan?</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingresa cómo te gusta que te digan" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="edad">¿Cuál es tu edad?</label>
+                                <input type="number" class="form-control" id="edad" placeholder="Ingresa tu edad" required min="0">
+                            </div>
+                        </div>
+            
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="origen">¿De dónde eres originario?</label>
+                                <input type="text" class="form-control" id="origen" placeholder="Ingresa tu lugar de origen" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="tieneHijos">¿Tienes hijos?</label>
+                                <input type="text" class="form-control" id="tieneHijos" placeholder="Indica si tienes hijos" required>
+                            </div>
+                        </div>
+            
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="direccion">¿Dónde vives?</label>
+                                <input type="text" class="form-control" id="direccion" placeholder="Ingresa tu lugar de residencia" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="casaPropia">¿Tienes casa propia?</label>
+                                <input type="text" class="form-control" id="casaPropia" placeholder="Indica si tienes casa propia" required>
+                            </div>
+                        </div>
+            
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="viveCon">¿Con quién vives?</label>
+                                <input type="text" class="form-control" id="viveCon" placeholder="Ingresa con quién vives" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="dedicacionPadres">Si vives con tus padres, ¿a qué se dedican tus padres o tu pareja?</label>
+                                <input type="text" class="form-control" id="dedicacionPadres" placeholder="Especifica a qué se dedican" required>
+                            </div>
+                        </div>
+            
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="distanciaOficina">¿A cuánto tiempo te quedaría la oficina o lugar de trabajo?</label>
+                                <input type="text" class="form-control" id="distanciaOficina" placeholder="Tiempo estimado en minutos" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="vehiculoPropio">¿Cuentas con vehículo propio?</label>
+                                <input type="text" class="form-control" id="vehiculoPropio" placeholder="Indica si cuentas con vehículo propio" required>
+                            </div>
+                        </div>
+            
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="sabeConducir">¿Sabes conducir?</label>
+                                <input type="text" class="form-control" id="sabeConducir" placeholder="Indica si sabes conducir" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="licencia">¿Licencia vigente? ¿Hasta cuándo vence?</label>
+                                <input type="text" class="form-control" id="licencia" placeholder="Ingresa la fecha de vencimiento de tu licencia" required>
+                            </div>
+                        </div>
+            
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="disponibilidadViajar">¿Disponibilidad para viajar?</label>
+                                <input type="text" class="form-control" id="disponibilidadViajar" placeholder="Indica si tienes disponibilidad para viajar" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="disponibilidadHorario">¿Disponibilidad de horario?</label>
+                                <input type="text" class="form-control" id="disponibilidadHorario" placeholder="Indica si tienes disponibilidad de horario" required>
+                            </div>
+                        </div>
+            
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="estadoCivil">¿Estado civil?</label>
+                                <input type="text" class="form-control" id="estadoCivil" placeholder="Indica tu estado civil" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="pareja">¿Actualmente tienes pareja?</label>
+                                <input type="text" class="form-control" id="pareja" placeholder="Indica si tienes pareja" required>
+                            </div>
+                        </div>
+            
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="planesCasarse">¿Planes de casarse?</label>
+                                <input type="text" class="form-control" id="planesCasarse" placeholder="Indica si tienes planes de casarte" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="percepcionSalarial">¿Percepción salarial actual?</label>
+                                <input type="text" class="form-control" id="percepcionSalarial" placeholder="Ingresa tu percepción salarial actual" required>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+            <div class="mb-3">
+                <!-- Ventana 2: Información de Salud -->
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#informacionSalud"
+                    aria-expanded="true" aria-controls="informacionSalud">
+                    <span id="toggle-icon" class="mr-2">&#9650;</span>2. Información de Salud
+                </button>
+                <div class="collapse show mt-3" id="informacionSalud">
+                    <div class="bordered-box p-4">
+                        <form>
+                            <div class="form-group">
+                                <label for="estadoSalud">Actualmente, ¿cómo considera tu estado de salud?</label>
+                                <input type="text" class="form-control" id="estadoSalud" placeholder="Ingresa tu estado de salud">
+                            </div>
+                            <div class="form-group">
+                                <label for="tiempoSinEnfermar">¿Cuánto tiempo ha pasado desde la última vez que se enfermó?</label>
+                                <input type="text" class="form-control" id="tiempoSinEnfermar" placeholder="Ingresa el tiempo">
+                            </div>
+                            <div class="form-group">
+                                <label for="salidasPais">¿Ha salido del país en los últimos 3 meses?</label>
+                                <input type="text" class="form-control" id="salidasPais" placeholder="Indique ">
+                            </div>
+                            <div class="form-group">
+                                <label for="covid">¿Ha sido positivo a COVID ?</label>
+                                <input type="text" class="form-control" id="covid" placeholder="Indique , si es si hace cuanto tiempo ">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactoCovid">¿Ha tenido familiares o personas cercanas positivas a COVID en los últimos 15 días?</label>
+                                <input type="text" class="form-control" id="contactoCovid" placeholder="Indique ">
+                            </div>
+                            <div class="form-group">
+                                <label for="enfermedadCronica">¿Sufre de alguna enfermedad crónica?</label>
+                                <input type="text" class="form-control" id="enfermedadCronica" placeholder="Indique si padece alguna informacion cronica">
+                            </div>
+                            <div class="form-group">
+                                <label for="alergias">¿Tiene alguna alergia?</label>
+                                <input type="text" class="form-control" id="alergias" placeholder="Indique las alergias si tiene">
+                            </div>
+                            <div class="form-group">
+                                <label for="cirugia">¿Alguna vez se ha sometido a una cirugía? ¿De qué tipo y hace cuánto tiempo?</label>
+                                <textarea class="form-control" id="cirugia" rows="3" placeholder="Detalles sobre cirugía, si aplica"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="embarazo">En caso de ser del sexo femenino, ¿está embarazada?</label>
+                                <input type="text" class="form-control" id="embarazo" placeholder="Indique su estado ">
+                            </div>
+                            <div class="form-group">
+                                <label for="consumoAlcohol">¿Cuál fue la última vez que consumió una bebida alcohólica?</label>
+                                <input type="text" class="form-control" id="consumoAlcohol" placeholder="Ingresa la fecha o hace cuánto">
+                            </div>
+                            <div class="form-group">
+                                <label for="fuma">¿Fuma y qué tan seguido?</label>
+                                <input type="text" class="form-control" id="fuma" placeholder="Indique la frecuencia de consumo">
+                            </div>
+                            <div class="form-group">
+                                <label for="consumoDrogas">¿Cuándo fue la última vez que consumió drogas?</label>
+                                <input type="text" class="form-control" id="consumoDrogas" placeholder="Indique la fecha o hace cuánto">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+
+            <div class="mb-3">
+                <!-- Ventana 3: Informacion Academica  -->
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#informacionacademica"
+                    aria-expanded="true" aria-controls="informacionacademica">
+                    <span id="toggle-icon" class="mr-2">&#9650;</span>3. Informacion Academica
+                </button>
+                <div class="collapse show mt-3" id="informacionacademica">
+                    <div class="bordered-box p-4">
+                        
+                        
+                        <!-- Sección de preguntas adicionales -->
+                        <div class="form-group">
+                            <label for="trabajo1">Último Trabajo</label>
+                            <textarea class="form-control" id="trabajo1" rows="3" placeholder="Descripción del trabajo 1"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tiempoDuracion1">Tiempo que Duró en el Último Trabajo</label>
+                            <input type="text" class="form-control" id="tiempoDuracion1" placeholder="Ejemplo: 2 años, 6 meses">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="horarios1">Horarios en el Último Trabajo</label>
+                            <input type="text" class="form-control" id="horarios1" placeholder="Ejemplo: Lunes a Viernes, 9am - 5pm">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="trabajo2">Trabajo Anterior 2</label>
+                            <textarea class="form-control" id="trabajo2" rows="3" placeholder="Descripción del trabajo 2"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tiempoDuracion2">Tiempo que Duró en el Trabajo Anterior 2</label>
+                            <input type="text" class="form-control" id="tiempoDuracion2" placeholder="Ejemplo: 1 año, 3 meses">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="horarios2">Horarios en el Trabajo Anterior 2</label>
+                            <input type="text" class="form-control" id="horarios2" placeholder="Ejemplo: Lunes a Viernes, 8am - 4pm">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="trabajo3">Trabajo Anterior 3</label>
+                            <textarea class="form-control" id="trabajo3" rows="3" placeholder="Descripción del trabajo 3"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tiempoDuracion3">Tiempo que Duró en el Trabajo Anterior 3</label>
+                            <input type="text" class="form-control" id="tiempoDuracion3" placeholder="Ejemplo: 1 año, 6 meses">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="horarios3">Horarios en el Trabajo Anterior 3</label>
+                            <input type="text" class="form-control" id="horarios3" placeholder="Ejemplo: Lunes a Viernes, 10am - 6pm">
+                        </div>
+                        
+                        
+                        <div class="form-group" >
+                            
+                            <label for="motivo">En caso de que no cuente con su título, ¿cuál es el motivo?</label>
+                            <textarea class="form-control" id="motivo" rows="3" placeholder="Explique el motivo"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="razonCarrera">¿Por qué escogió su carrera?</label>
+                            <textarea class="form-control" id="razonCarrera" rows="3" placeholder="Explique las razones para escoger su carrera"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="planesEstudios">¿Tiene planes de seguir estudiando?</label>
+                            <textarea class="form-control" id="planesEstudios" rows="3" placeholder="Indique si tiene planes de continuar sus estudios y qué áreas le interesan"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+
+            <div class="mb-3">
+                <!-- Ventana 4: Información Laboral -->
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#informacionLaboral"
+                    aria-expanded="true" aria-controls="informacionLaboral">
+                    <span id="toggle-icon" class="mr-2">&#9650;</span>4. Información Laboral
+                </button>
+                <div class="collapse show mt-3" id="informacionLaboral">
+                    <div class="bordered-box p-4">
+                        <!-- Sección de Información de Empleo -->
+                        <h5>Información de Empleo</h5>
+                        
+                        <div class="form-group">
+                            <label for="estatusDesempleo">Estatus Actual de Desempleo</label>
+                            <select class="form-control" id="estatusDesempleo">
+                                <option value="desempleado">Desempleado</option>
+                                <option value="empleado">Empleado</option>
+                                <option value="autonomo">Autónomo</option>
+                                <option value="jubilado">Jubilado</option>
+                                <option value="estudiante">Estudiante</option>
+                            </select>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="ultimosTrabajos">Últimos 3 Trabajos</label>
+                            <textarea class="form-control" id="ultimosTrabajos" rows="3"></textarea>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="tiempoDuracion">Tiempo que Duró en el Último Trabajo</label>
+                            <input type="text" class="form-control" id="tiempoDuracion" placeholder="Ejemplo: 2 años, 6 meses">
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="horarios">Horarios en el Último Trabajo</label>
+                            <input type="text" class="form-control" id="horarios" placeholder="Ejemplo: Lunes a Viernes, 9am - 5pm">
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="actividades">Actividades Desempeñadas</label>
+                            <textarea class="form-control" id="actividades" rows="3"></textarea>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="sueldo">Sueldo en el Último Trabajo</label>
+                            <input type="text" class="form-control" id="sueldo" placeholder="Ejemplo: $20,000 mensuales">
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="motivoBaja">Motivo de la Baja</label>
+                            <textarea class="form-control" id="motivoBaja" rows="3"></textarea>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="telefonosReferencia">Números Telefónicos para Referencia</label>
+                            <input type="text" class="form-control" id="telefonosReferencia" placeholder="Ejemplo: (55) 1234 5678">
+                        </div>
+                
+                        <!-- Sección de Vacante Esperada -->
+                        <div class="form-group">
+                            <label for="vacanteEsperada">¿Está en espera de alguna vacante?</label>
+                            <select class="form-control" id="vacanteEsperada">
+                                <option value="no">No</option>
+                                <option value="si">Sí</option>
+                            </select>
+                        </div>
+                
+                        <div class="form-group" id="empresaVacante" style="display:none;">
+                            <label for="empresa">¿En qué empresa se encuentra esperando?</label>
+                            <input type="text" class="form-control" id="empresa" placeholder="Ejemplo: Empresa XYZ">
+                        </div>
+                
+                        <div class="form-group" id="filtroVacante" style="display:none;">
+                            <label for="filtro">¿En qué filtro se encuentra?</label>
+                            <input type="text" class="form-control" id="filtro" placeholder="Ejemplo: Filtro 1 - Candidato aprobado">
+                        </div>
+                
+                      
+                    </div>
+                </div>
+                
+            
+
+                <div class="mb-3">
+                    <!-- Ventana 5: Competencia  -->
+                    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#competencia"
+                        aria-expanded="true" aria-controls="competencia">
+                        <span id="toggle-icon" class="mr-2">&#9650;</span>5. Competencia
+                    </button>
+                    <div class="collapse show mt-3" id="competencia">
+                        <div class="bordered-box p-4">
+                            <p><strong>1. Menciona una situación de estrés que hayas enfrentado en alguno de tus empleados.</strong></p>
+                            <textarea class="form-control" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                            
+                            <p><strong>2. ¿Por qué crees que fue estresante esta situación?</strong></p>
+                            <textarea class="form-control" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                
+                            <p><strong>3. ¿Cómo la solucionaste?</strong></p>
+                            <textarea class="form-control" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                
+                            <p><strong>4. ¿Cuál fue el mayor de tus logros en tu último empleo y qué hiciste para llegar a él?</strong></p>
+                            <textarea class="form-control" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                
+                            <p><strong>5. Plasma una situación mala o problema más frecuente (posiblemente de estrés) que crees que tendrás en la vacante.</strong></p>
+                            <textarea class="form-control" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                
+                            <p><strong>6. ¿Qué harías en esta situación?</strong></p>
+                            <textarea class="form-control" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                
+                            <p><strong>7. ¿Qué respuesta le darías a tu jefe directo ante esta situación?</strong></p>
+                            <textarea class="form-control" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                
+                            <p><strong>8. ¿Cómo sería tu seguimiento ante esta situación?</strong></p>
+                            <textarea class="form-control" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+                <div class="mb-3">
+                    <!-- Ventana 6: Información Complementaria -->
+                    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#informaciónComplementaria"
+                        aria-expanded="true" aria-controls="informaciónComplementaria">
+                        <span id="toggle-icon" class="mr-2">&#9650;</span>6. Información Complementaria 
+                    </button>
+                    <div class="collapse show mt-3" id="informaciónComplementaria">
+                        <div class="bordered-box p-4">
+                            
+                            
+                            <!-- Tabla de valores y defectos/áreas de oportunidad -->
+                            <table class="table table-bordered mt-4">
+                                <thead>
+                                    <tr>
+                                        <th>Valor</th>
+                                        <th>Defecto/Área de Oportunidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" class="form-control" placeholder="Valor 1"></td>
+                                        <td><input type="text" class="form-control" placeholder="Área de oportunidad 1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="form-control" placeholder="Valor 2"></td>
+                                        <td><input type="text" class="form-control" placeholder="Área de oportunidad 2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="form-control" placeholder="Valor 3"></td>
+                                        <td><input type="text" class="form-control" placeholder="Área de oportunidad 3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="form-control" placeholder="Valor 4"></td>
+                                        <td><input type="text" class="form-control" placeholder="Área de oportunidad 4"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                
+                            <!-- Preguntas -->
+                            <div class="form-group mt-4">
+                                <label for="pregunta1">¿Qué fue lo que te llamó la atención de nuestra vacante?</label>
+                                <textarea class="form-control" id="pregunta1" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="pregunta2">¿Por qué te gustaría trabajar con nosotros?</label>
+                                <textarea class="form-control" id="pregunta2" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="pregunta3">¿Por qué motivo crees que te debemos contratar?</label>
+                                <textarea class="form-control" id="pregunta3" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="pregunta4">¿Por qué no deberíamos contratarte?</label>
+                                <textarea class="form-control" id="pregunta4" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="vacaciones">¿Tienes vacaciones planeadas en las próximas fechas?</label>
+                                <textarea class="form-control" id="vacaciones" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            
+
+            
+
+            <div class="mb-3">
+                <!-- Ventana 9: Comentarios Extras  -->
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#comentarios"
+                    aria-expanded="true" aria-controls="comentarios">
+                    <span id="toggle-icon" class="mr-2">&#9650;</span>7. Comentarios Adicionales 
+                </button>
+                <div class="collapse show mt-3" id="comentarios">
+                    <div class="bordered-box p-4">
+                        
+                        <div class="form-group">
+                            <label for="vacaciones">Comentarios Extras:</label>
+                            <textarea class="form-control" id="vacaciones" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+    // Mostrar el campo de "motivo" solo si la respuesta es "No" en la pregunta sobre titulación
+    document.getElementById('titulacion').addEventListener('change', function() {
+        var motivoNoTitulo = document.getElementById('motivoNoTitulo');
+        if (this.value === 'no') {
+            motivoNoTitulo.style.display = 'block';
+        } else {
+            motivoNoTitulo.style.display = 'none';
+        }
+    });
+       <!-- Script para mostrar/ocultar los campos de empresa y filtro -->
+                        
+        document.getElementById('vacanteEsperada').addEventListener('change', function() {
+            var vacanteEsperada = this.value;
+                if (vacanteEsperada === 'si') {
+                    document.getElementById('empresaVacante').style.display = 'block';
+                    document.getElementById('filtroVacante').style.display = 'block';
+                } else {
+                    document.getElementById('empresaVacante').style.display = 'none';
+                    document.getElementById('filtroVacante').style.display = 'none';
+             }
+    });
+                        
+</script>
+
+</html>
