@@ -226,54 +226,23 @@
                 <div class="collapse show mt-3" id="informacionacademica">
                     <div class="bordered-box p-4">
                         
-                        
-                        <!-- Sección de preguntas adicionales -->
-                        <div class="form-group">
-                            <label for="trabajo1">Último Trabajo</label>
-                            <textarea class="form-control" id="trabajo1" rows="3" placeholder="Descripción del trabajo 1"></textarea>
+                        <div class="form-group" >
+                            
+                            <label for="escuela">¿En que ha estudiado desde la escuela ?</label>
+                            <textarea class="form-control" id="escuela" rows="3" placeholder="Detalle la situacion "></textarea>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="tiempoDuracion1">Tiempo que Duró en el Último Trabajo</label>
-                            <input type="text" class="form-control" id="tiempoDuracion1" placeholder="Ejemplo: 2 años, 6 meses">
+                        <div class="form-group" >
+                            
+                            <label for="motivo">¿Ultimo grado de estudios?</label>
+                            <textarea class="form-control" id="motivo" rows="3" placeholder="Explique el motivo"></textarea>
+
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="horarios1">Horarios en el Último Trabajo</label>
-                            <input type="text" class="form-control" id="horarios1" placeholder="Ejemplo: Lunes a Viernes, 9am - 5pm">
+                        <div class="form-group" >
+                            
+                            <label for="motivo">¿Esta titulado ?</label>
+                            <textarea class="form-control" id="motivo" rows="3" placeholder="Explique el motivo"></textarea>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="trabajo2">Trabajo Anterior 2</label>
-                            <textarea class="form-control" id="trabajo2" rows="3" placeholder="Descripción del trabajo 2"></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="tiempoDuracion2">Tiempo que Duró en el Trabajo Anterior 2</label>
-                            <input type="text" class="form-control" id="tiempoDuracion2" placeholder="Ejemplo: 1 año, 3 meses">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="horarios2">Horarios en el Trabajo Anterior 2</label>
-                            <input type="text" class="form-control" id="horarios2" placeholder="Ejemplo: Lunes a Viernes, 8am - 4pm">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="trabajo3">Trabajo Anterior 3</label>
-                            <textarea class="form-control" id="trabajo3" rows="3" placeholder="Descripción del trabajo 3"></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="tiempoDuracion3">Tiempo que Duró en el Trabajo Anterior 3</label>
-                            <input type="text" class="form-control" id="tiempoDuracion3" placeholder="Ejemplo: 1 año, 6 meses">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="horarios3">Horarios en el Trabajo Anterior 3</label>
-                            <input type="text" class="form-control" id="horarios3" placeholder="Ejemplo: Lunes a Viernes, 10am - 6pm">
-                        </div>
-                        
-                        
+
                         <div class="form-group" >
                             
                             <label for="motivo">En caso de que no cuente con su título, ¿cuál es el motivo?</label>
@@ -319,34 +288,11 @@
                         </div>
                 
                         <div class="form-group">
-                            <label for="ultimosTrabajos">Últimos 3 Trabajos</label>
+                            <label for="ultimosTrabajos">Últimos 3 Trabajos (Tiempo, Horarios, Actividades,Sueldo, Motivo de baja )</label>
                             <textarea class="form-control" id="ultimosTrabajos" rows="3"></textarea>
                         </div>
                 
-                        <div class="form-group">
-                            <label for="tiempoDuracion">Tiempo que Duró en el Último Trabajo</label>
-                            <input type="text" class="form-control" id="tiempoDuracion" placeholder="Ejemplo: 2 años, 6 meses">
-                        </div>
-                
-                        <div class="form-group">
-                            <label for="horarios">Horarios en el Último Trabajo</label>
-                            <input type="text" class="form-control" id="horarios" placeholder="Ejemplo: Lunes a Viernes, 9am - 5pm">
-                        </div>
-                
-                        <div class="form-group">
-                            <label for="actividades">Actividades Desempeñadas</label>
-                            <textarea class="form-control" id="actividades" rows="3"></textarea>
-                        </div>
-                
-                        <div class="form-group">
-                            <label for="sueldo">Sueldo en el Último Trabajo</label>
-                            <input type="text" class="form-control" id="sueldo" placeholder="Ejemplo: $20,000 mensuales">
-                        </div>
-                
-                        <div class="form-group">
-                            <label for="motivoBaja">Motivo de la Baja</label>
-                            <textarea class="form-control" id="motivoBaja" rows="3"></textarea>
-                        </div>
+                        
                 
                         <div class="form-group">
                             <label for="telefonosReferencia">Números Telefónicos para Referencia</label>
@@ -355,23 +301,11 @@
                 
                         <!-- Sección de Vacante Esperada -->
                         <div class="form-group">
-                            <label for="vacanteEsperada">¿Está en espera de alguna vacante?</label>
-                            <select class="form-control" id="vacanteEsperada">
-                                <option value="no">No</option>
-                                <option value="si">Sí</option>
-                            </select>
+                            <label for="vacanteEsperada">¿Está en espera de alguna vacante? En que empresa y en que filtro se encuentra</label>
+                            <input type="text" class="form-control" id="empresa" placeholder="Detalle la informacion">
                         </div>
                 
-                        <div class="form-group" id="empresaVacante" style="display:none;">
-                            <label for="empresa">¿En qué empresa se encuentra esperando?</label>
-                            <input type="text" class="form-control" id="empresa" placeholder="Ejemplo: Empresa XYZ">
-                        </div>
-                
-                        <div class="form-group" id="filtroVacante" style="display:none;">
-                            <label for="filtro">¿En qué filtro se encuentra?</label>
-                            <input type="text" class="form-control" id="filtro" placeholder="Ejemplo: Filtro 1 - Candidato aprobado">
-                        </div>
-                
+                    
                       
                     </div>
                 </div>
@@ -429,7 +363,7 @@
                             <table class="table table-bordered mt-4">
                                 <thead>
                                     <tr>
-                                        <th>Valor</th>
+                                        <th>Valores </th>
                                         <th>Defecto/Área de Oportunidad</th>
                                     </tr>
                                 </thead>
